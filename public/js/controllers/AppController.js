@@ -14,6 +14,13 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
             controller: 'HomeController'
         });
 }])
+    .run(['$rootScope', '$window', '$location', function ($rootScope, $window, $location) {
+        $window.ga('create', 'UA-70991808-1', 'auto');
+        $rootScope.$on('$stateChangeSuccess', function (event) {
+            $window.ga('send', 'pageview', $location.path());
+        });
+    }]
+)
 
     .controller('AppController', function ($scope) {
 
