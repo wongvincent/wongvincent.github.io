@@ -9,7 +9,7 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
             templateUrl: 'views/underconstruction.html',
         })
         .when('/home', {
-            templateUrl: '/'
+            redirectTo: '/'
         })
         .when('/projects', {
             redirectTo: '/'
