@@ -10,15 +10,19 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
         })
         .when('/home', {
             redirectTo: '/'
+            //templateUrl: 'views/home.html'
         })
         .when('/projects', {
             redirectTo: '/'
+            //templateUrl: 'views/projects.html'
         })
         .when('/resume', {
             redirectTo: '/'
+            //templateUrl: 'views/resume.html'
         })
         .when('/contact', {
             redirectTo: '/'
+            //templateUrl: 'views/contact.html'
         })
         .when('/underconstruction', {
             templateUrl: 'views/underconstruction.html',
