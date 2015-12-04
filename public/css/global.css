@@ -1,2 +1,20 @@
+* {
+  margin: 0; }
+
+html, body {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0; }
+
+.white {
+  color: #dddddd; }
+
+.grey {
+  color: #a0a0a0; }
+
+.black {
+  color: black; }
+
 .hidden {
   visibility: hidden; }

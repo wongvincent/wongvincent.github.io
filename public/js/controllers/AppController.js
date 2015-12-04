@@ -7,7 +7,21 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
     $routeProvider
         .when('/', {
             templateUrl: 'views/underconstruction.html',
-            controller: 'HomeController'
+        })
+        .when('/home', {
+            templateUrl: '/'
+        })
+        .when('/projects', {
+            redirectTo: '/'
+        })
+        .when('/resume', {
+            redirectTo: '/'
+        })
+        .when('/contact', {
+            redirectTo: '/'
+        })
+        .when('/underconstruction', {
+            templateUrl: 'views/underconstruction.html',
         })
         .otherwise({
             templateUrl: 'views/404.html',
@@ -23,6 +37,10 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
 )
 
     .controller('AppController', function ($scope) {
+        var date = new Date();
+        $scope.year = date.getFullYear();
+
+
         //leverages animate.css classes
         $scope.animateInBounceInDown = function($el) {
             $el.removeClass('hidden');
