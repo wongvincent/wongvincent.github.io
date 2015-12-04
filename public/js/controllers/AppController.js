@@ -44,7 +44,7 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
         //leverages animate.css classes
         $scope.animateInBounceInDown = function($el) {
             $el.removeClass('hidden');
-            $el.addClass('animated bounceInDown'); // this example
+            $el.addClass('animated bounceInDown');
         };
 
         $scope.animateOutBounceInDown = function($el) {
@@ -54,7 +54,7 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
 
         $scope.animateInPulse = function($el) {
             $el.removeClass('hidden');
-            $el.addClass('animated pulse'); // this example
+            $el.addClass('animated pulse');
         };
 
         $scope.animateOutPulse = function($el) {
@@ -64,7 +64,7 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
 
         $scope.animateInZoomInUp = function($el) {
             $el.removeClass('hidden');
-            $el.addClass('animated zoomInUp'); // this example
+            $el.addClass('animated zoomInUp');
         };
 
         $scope.animateOutZoomInUp = function($el) {
