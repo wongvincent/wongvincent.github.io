@@ -56,6 +56,16 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
             $el.removeClass('animated bounceInDown');
         };
 
+        $scope.animateInFlipInX = function($el) {
+            $el.removeClass('hidden');
+            $el.addClass('animated flipInX');
+        };
+
+        $scope.animateOutFlipInX = function($el) {
+            $el.addClass('hidden');
+            $el.removeClass('animated flipInX');
+        };
+
         $scope.animateInPulse = function($el) {
             $el.removeClass('hidden');
             $el.addClass('animated pulse');
