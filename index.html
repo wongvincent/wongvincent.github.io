@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <!--<base href="/"> -->
 
     <title>Vincent Wong - Developer</title>
@@ -16,6 +16,10 @@
     <script src="public/js/libs/angular-scroll-animate.js"></script>
 
     <!-- plugins -->
+
+    <!-- Angular analytics -->
+    <script src="public/js/plugins/angulartics.min.js"></script>
+    <script src="public/js/plugins/angulartics-ga.min.js"></script>
 
     <!-- typed.js jQuery plugin -->
     <script src="public/js/plugins/typed.js-master/js/typed.js"></script>
@@ -38,17 +42,20 @@
 
     <!-- Google analytics -->
     <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                        (i[r].q = i[r].q || []).push(arguments)
-                    }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                    m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        if (document.location.hostname.search("vincentw.me") !== -1) {
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                            (i[r].q = i[r].q || []).push(arguments)
+                        }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-70991808-1', 'none');
+        }
     </script>
 </head>
 
@@ -58,19 +65,26 @@
         <div ng-view></div>
         <div class="footer grey">
             <div>
-                <a href="#/home">HOME</a>
-                <a href="#/projects">PROJECTS</a>
-                <a href="#/resume">RESUME</a>
-                <a href="#/contact">CONTACT</a>
+                <a href="#/home" analytics-on="click" analytics-event="Navigate" analytics-category="Footer"
+                   analytics-label="Home">HOME</a>
+                <a href="#/projects" analytics-on="click" analytics-event="Navigate" analytics-category="Footer"
+                   analytics-label="Projects">PROJECTS</a>
+                <a href="#/resume" analytics-on="click" analytics-event="Navigate" analytics-category="Footer"
+                   analytics-label="Resume">RESUME</a>
+                <a href="#/contact" analytics-on="click" analytics-event="Navigate" analytics-category="Footer"
+                   analytics-label="Contact">CONTACT</a>
             </div>
             <div>
-                <a href="https://www.instagram.com/wong.vincent/" target="_blank">
+                <a href="https://www.instagram.com/wong.vincent/" target="_blank" analytics-on="click"
+                   analytics-event="Instagram" analytics-category="Footer">
                     <img src="public/img/instagram_white.png">
                 </a>
-                <a href="https://ca.linkedin.com/in/vincentw1" target="_blank">
+                <a href="https://ca.linkedin.com/in/vincentw1" target="_blank" analytics-on="click"
+                   analytics-event="LinkedIn" analytics-category="Footer">
                     <img src="public/img/linkedin_white.png">
                 </a>
-                <a href="mailto:" target="_top">
+                <a href="mailto:" target="_top" analytics-on="click" analytics-event="Email"
+                   analytics-category="Footer">
                     <img src="public/img/mail.png">
                 </a>
             </div>

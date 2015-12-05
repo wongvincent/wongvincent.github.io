@@ -1,6 +1,6 @@
-var app = angular.module('app', ['ngRoute', 'angular-scroll-animate']);
+var app = angular.module('app', ['ngRoute', 'angular-scroll-animate', 'angulartics', 'angulartics.google.analytics']);
 
-app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+app.config(['$routeProvider', '$locationProvider', '$analyticsProvider', function ($routeProvider, $locationProvider, $analyticsProvider) {
 
     //$locationProvider.html5Mode(true).hashPrefix('!')
 
@@ -31,14 +31,10 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
             templateUrl: 'views/404.html',
             controller: 'HomeController'
         });
+
+    $analyticsProvider.firstPageview(true); /* Records pages that don't use $state or $route */
+    $analyticsProvider.withAutoBase(true);  /* Records full path */
 }])
-    .run(['$rootScope', '$window', '$location', function ($rootScope, $window, $location) {
-        $window.ga('create', 'UA-70991808-1', 'auto');
-        $rootScope.$on('$stateChangeSuccess', function (event) {
-            $window.ga('send', 'pageview', $location.path());
-        });
-    }]
-)
 
     .controller('AppController', function ($scope) {
         var date = new Date();
