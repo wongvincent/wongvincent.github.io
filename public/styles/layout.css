@@ -1,5 +1,5 @@
 .wrapper {
-  min-height: calc(100% - 40px * 2);
+  min-height: calc(100% - 50px * 2);
   height: auto !important;
   margin: 0 auto;
   margin-bottom: -85px;
@@ -15,16 +15,31 @@
   top: 0px;
   left: 0px;
   width: 100%;
-  height: calc(100vh - 85px - 40px - 40px);
+  height: calc(100vh - 85px - 50px - 50px);
   text-align: center; }
   .middle-of-page div {
     position: relative;
     top: 50%; }
 
+#nav-header {
+  text-align: center;
+  z-index: 1000; }
+  #nav-header button {
+    color: white;
+    background-color: rgba(39, 89, 140, 0);
+    border-color: rgba(39, 89, 140, 0);
+    padding: 20px; }
+  #nav-header a {
+    text-decoration: none;
+    color: #cccccc;
+    font-size: 1.5em; }
+  #nav-header a:hover {
+    color: #ffffff; }
+
 .footer {
   background: #2b2b2b;
   width: 100%;
-  padding: 40px 0;
+  padding: 50px 0;
   font-size: 0.9em;
   text-align: center;
   height: 85px; }

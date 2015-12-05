@@ -6,22 +6,22 @@ app.config(['$routeProvider', '$locationProvider', '$analyticsProvider', functio
 
     $routeProvider
         .when('/', {
-            templateUrl: 'views/underconstruction.html',
+            templateUrl: 'views/home.html'
         })
         .when('/home', {
-            redirectTo: '/'
-            //templateUrl: 'views/home.html'
+            //redirectTo: '/'
+            templateUrl: 'views/home.html'
         })
         .when('/projects', {
-            redirectTo: '/'
+            redirectTo: '/underconstruction'
             //templateUrl: 'views/projects.html'
         })
         .when('/resume', {
-            redirectTo: '/'
+            redirectTo: '/underconstruction'
             //templateUrl: 'views/resume.html'
         })
         .when('/contact', {
-            redirectTo: '/'
+            redirectTo: '/underconstruction'
             //templateUrl: 'views/contact.html'
         })
         .when('/underconstruction', {

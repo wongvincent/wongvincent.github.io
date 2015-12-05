@@ -1,28 +1,5 @@
 $blue : #003264;
 
-#nav-header{
-  text-align: right;
-  z-index: 1000;
-
-  button {
-    color: white;
-    background-color: rgba(39, 89, 140, 0);
-    border-color: rgba(39, 89, 140, 0);
-    padding: 20px;
-  }
-
-  a{
-    text-decoration: none;
-    color: #cccccc;
-    font-weight: bold;
-    font-size: 1.3em;
-  }
-
-  a:hover{
-    color: #ffffff;
-  }
-}
-
 #home {
 
   .panels {

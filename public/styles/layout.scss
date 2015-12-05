@@ -1,5 +1,5 @@
 $footer-height: 85px;
-$footer-top-bot-padding: 40px;
+$footer-top-bot-padding: 50px;
 
 .wrapper {
   min-height: calc(100% - #{$footer-top-bot-padding} * 2);
@@ -27,6 +27,29 @@ $footer-top-bot-padding: 40px;
     top: 50%;
   }
 }
+
+#nav-header{
+  text-align: center;
+  z-index: 1000;
+
+  button {
+    color: white;
+    background-color: rgba(39, 89, 140, 0);
+    border-color: rgba(39, 89, 140, 0);
+    padding: 20px;
+  }
+
+  a{
+    text-decoration: none;
+    color: #cccccc;
+    font-size: 1.5em;
+  }
+
+  a:hover{
+    color: #ffffff;
+  }
+}
+
 
 .footer{
   a{
