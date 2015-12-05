@@ -44,16 +44,12 @@
     <div id="life" class="panels">
         <div class="heading">Life in Pictures</div>
         <div id="pictures">
-            <a href="https://www.instagram.com/p/-zawaiKW5F/" target="_blank"><img
-                    src="public/img/mylife/instagram5.png" when-visible="animateInFlipInX" class="hidden"></a>
-            <a href="https://www.instagram.com/p/9ZqS6QKW6W/" target="_blank"><img
-                    src="public/img/mylife/instagram3.png" when-visible="animateInFlipInX" class="hidden"></a>
-            <a href="https://www.instagram.com/p/-zaPxzqW4J/" target="_blank"><img
-                    src="public/img/mylife/instagram4.png" when-visible="animateInFlipInX" class="hidden"></a>
-            <a href="https://www.instagram.com/p/9KYsWyKW7d/" target="_blank"><img
-                    src="public/img/mylife/instagram2.png" when-visible="animateInFlipInX" class="hidden"></a>
-            <a href="https://www.instagram.com/p/1eEFdTKW1h/" target="_blank"><img
-                    src="public/img/mylife/instagram1.png" when-visible="animateInFlipInX" class="hidden"></a>
+            <a ng-href="{{pic.href}}" target="_blank" ng-repeat="pic in instagramPics">
+                <span class="text">
+                    {{pic.text}}
+                </span>
+                <img ng-src="{{pic.img}}" when-visible="animateInFlipInX" class="hidden">
+            </a>
         </div>
     </div>
 

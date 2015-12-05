@@ -6,11 +6,11 @@ app.config(['$routeProvider', '$locationProvider', '$analyticsProvider', functio
 
     $routeProvider
         .when('/', {
-            templateUrl: 'views/home.html'
+            templateUrl: 'views/home.html',
+            controller: 'HomeController'
         })
         .when('/home', {
-            //redirectTo: '/'
-            templateUrl: 'views/home.html'
+            redirectTo: '/'
         })
         .when('/projects', {
             redirectTo: '/underconstruction'
@@ -28,8 +28,7 @@ app.config(['$routeProvider', '$locationProvider', '$analyticsProvider', functio
             templateUrl: 'views/underconstruction.html',
         })
         .otherwise({
-            templateUrl: 'views/404.html',
-            controller: 'HomeController'
+            templateUrl: 'views/404.html'
         });
 
     $analyticsProvider.firstPageview(true); /* Records pages that don't use $state or $route */

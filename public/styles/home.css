@@ -39,11 +39,26 @@
 #home #life #pictures {
   text-align: center; }
   #home #life #pictures a {
-    margin: 0 10px; }
-  #home #life #pictures img {
-    height: 200px;
-    width: 200px; }
-  #home #life #pictures img:hover {
-    opacity: 0.6;
-    filter: alpha(opacity=60);
-    box-shadow: 0 0 0 #000000; }
+    margin: 0 10px;
+    position: relative;
+    display: inline-block; }
+    #home #life #pictures a .text {
+      position: absolute;
+      top: 0;
+      color: white;
+      background-color: rgba(0, 50, 100, 0.6);
+      width: 200px;
+      height: 200px;
+      line-height: 200px;
+      text-align: center;
+      z-index: 10;
+      opacity: 0;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease; }
+    #home #life #pictures a .text:hover {
+      opacity: 1; }
+    #home #life #pictures a img {
+      height: 200px;
+      width: 200px; }
