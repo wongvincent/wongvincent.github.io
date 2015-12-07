@@ -17,8 +17,8 @@ app.config(['$routeProvider', '$locationProvider', '$analyticsProvider', functio
             //templateUrl: 'views/projects.html'
         })
         .when('/resume', {
-            redirectTo: '/underconstruction'
-            //templateUrl: 'views/resume.html'
+            //redirectTo: '/underconstruction'
+            templateUrl: 'views/resume.html'
         })
         .when('/contact', {
             redirectTo: '/underconstruction'
@@ -51,6 +51,26 @@ app.config(['$routeProvider', '$locationProvider', '$analyticsProvider', functio
             $el.removeClass('animated bounceInDown');
         };
 
+        $scope.animateInFadeInDown = function($el) {
+            $el.removeClass('hidden');
+            $el.addClass('animated fadeInDown');
+        };
+
+        $scope.animateOutFadeInDown = function($el) {
+            $el.addClass('hidden');
+            $el.removeClass('animated fadeInDown');
+        };
+
+        $scope.animateInFadeInUp = function($el) {
+            $el.removeClass('hidden');
+            $el.addClass('animated fadeInUp');
+        };
+
+        $scope.animateOutFadeInUp = function($el) {
+            $el.addClass('hidden');
+            $el.removeClass('animated fadeInUp');
+        };
+
         $scope.animateInFlipInX = function($el) {
             $el.removeClass('hidden');
             $el.addClass('animated flipInX');
@@ -69,6 +89,16 @@ app.config(['$routeProvider', '$locationProvider', '$analyticsProvider', functio
         $scope.animateOutPulse = function($el) {
             $el.addClass('hidden');
             $el.removeClass('animated pulse');
+        };
+
+        $scope.animateInTada = function($el) {
+            $el.removeClass('hidden');
+            $el.addClass('animated tada');
+        };
+
+        $scope.animateOutTada = function($el) {
+            $el.addClass('hidden');
+            $el.removeClass('animated tada');
         };
 
         $scope.animateInZoomInUp = function($el) {

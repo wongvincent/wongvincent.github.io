@@ -92,4 +92,29 @@
       #home #aboutme #wrapper #text #body a:hover {
         color: #999999; }
 
+#resume {
+  background: #387fc8;
+  width: 100%;
+  min-height: 100vh;
+  text-align: center; }
+  #resume #top {
+    height: 400px; }
+    #resume #top #text {
+      font-weight: bold;
+      font-size: 4.5em;
+      padding: 60px 8px 30px; }
+    #resume #top #view-resume a {
+      padding: 20px;
+      font-size: 1.2em;
+      color: #eeeeee;
+      border: 3px solid #eeeeee;
+      background: #444444; }
+    #resume #top #view-resume a:hover {
+      color: #003264;
+      background: #eeeeee;
+      border-color: #003264; }
+  #resume #body {
+    min-height: 60vh;
+    background-color: white; }
+
 /*# sourceMappingURL=home.css.map */

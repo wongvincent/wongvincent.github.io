@@ -3,6 +3,7 @@ $blue: #27598C;
 $banner-background-color: rgba(0, 50, 100, 0.6);
 $instagram-image-size: 200px;
 $full-height: 100vh;
+$nav-header-height: 63px;
 
 #home {
   .panels {
@@ -142,5 +143,44 @@ $full-height: 100vh;
         }
       }
     }
+  }
+}
+
+
+#resume{
+  background: #387fc8;
+  width: 100%;
+  min-height: $full-height;
+  text-align: center;
+
+  #top{
+    height: 400px;
+
+    #text{
+      font-weight: bold;
+      font-size: 4.5em;
+      padding: 60px 8px 30px;
+
+    }
+
+    #view-resume{
+      a{
+        padding: 20px;
+        font-size: 1.2em;
+        color:#eeeeee;
+        border: 3px solid #eeeeee;
+        background: #444444;
+      }
+      a:hover{
+        color: $dark-blue;
+        background: #eeeeee;
+        border-color: $dark-blue;
+      }
+    }
+  }
+
+  #body{
+    min-height:60vh;
+    background-color:white;
   }
 }

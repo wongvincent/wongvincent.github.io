@@ -1,35 +1,40 @@
+.nav-header-div {
+  height: 63px; }
+
 .wrapper {
   min-height: calc(100% - 50px * 2);
   height: auto !important;
   margin: 0 auto;
   margin-bottom: -85px;
   /* the bottom margin is the negative value of the footer's height */ }
-
-.container {
-  position: absolute;
-  height: 100%;
-  width: 100%; }
+  .wrapper .container {
+    position: absolute;
+    height: 100%;
+    width: 100%; }
+  .wrapper .ngview {
+    margin: -63px 0 0; }
 
 .middle-of-page {
   position: relative;
-  top: 0px;
+  top: 63px;
   left: 0px;
   width: 100%;
-  height: calc(100vh - 85px - 50px - 50px);
+  height: calc(100vh - 85px - 63px - 50px);
   text-align: center; }
   .middle-of-page div {
     position: relative;
-    top: 50%; }
+    top: calc(50vh - 85px - 63px - 50px); }
 
 #nav-header {
   text-align: center;
-  z-index: 1000; }
+  z-index: 1000;
+  height: 63px; }
   #nav-header a {
     color: #cccccc;
     font-size: 1.3em;
     line-height: 3;
     margin: 2px;
-    padding: 7px; }
+    padding: 20px 7px; }
   #nav-header a:hover {
     color: #ffffff; }
 

@@ -1,44 +1,56 @@
 $blue: #27598C;
 $footer-height: 85px;
 $footer-top-bot-padding: 50px;
+$nav-header-height: 63px;
+
+.nav-header-div{
+  height: $nav-header-height;
+}
 
 .wrapper {
   min-height: calc(100% - #{$footer-top-bot-padding} * 2);
   height: auto !important;
   margin: 0 auto;
   margin-bottom: -$footer-height; /* the bottom margin is the negative value of the footer's height */
+
+  .container{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+
+  .ngview{
+    margin: -$nav-header-height 0 0;
+  }
 }
 
-.container{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-}
+
 
 .middle-of-page {
   position: relative;
-  top: 0px;
+  top: $nav-header-height;
   left: 0px;
   width: 100%;
-  height: calc(100vh - #{$footer-height} - #{$footer-top-bot-padding} - #{$footer-top-bot-padding});
+  height: calc(100vh - #{$footer-height} - #{$nav-header-height} - #{$footer-top-bot-padding});
   text-align: center;
 
   div {
     position: relative;
-    top: 50%;
+    top: calc(50vh - #{$footer-height} - #{$nav-header-height} - #{$footer-top-bot-padding});
   }
 }
 
 #nav-header{
   text-align: center;
   z-index: 1000;
+  height: $nav-header-height;
 
   a{
     color: #cccccc;
     font-size: 1.3em;
     line-height: 3;
     margin: 2px;
-    padding: 7px;
+    padding: 20px 7px;
   }
 
   a:hover{
