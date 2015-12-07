@@ -27,16 +27,15 @@ $nav-header-height: 63px;
 
 
 .middle-of-page {
-  position: relative;
   top: $nav-header-height;
   left: 0px;
   width: 100%;
-  height: calc(100vh - #{$footer-height} - #{$nav-header-height} - #{$footer-top-bot-padding});
+  height: calc(100vh - #{$footer-height} - #{$nav-header-height} - 37px);
   text-align: center;
 
   div {
     position: relative;
-    top: calc(50vh - #{$footer-height} - #{$nav-header-height} - #{$footer-top-bot-padding});
+    top: calc(50vh - #{$footer-height} - #{$nav-header-height});
   }
 }
 
@@ -62,7 +61,8 @@ $nav-header-height: 63px;
 .footer{
   a{
     display: inline-block;
-    margin: 0px 10px 15px;
+    margin: 0px 2px 10px;
+    padding: 0 3px 10px;
     color: #bbbbbb;
     font-weight:bold;
   }

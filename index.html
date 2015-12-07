@@ -43,8 +43,6 @@
 
     <!-- directives -->
     <script src="public/js/directives/TypedDirective.js"></script>
-    <script src="public/js/directives/NavHeaderDirective.js"></script>
-    <script src="public/js/directives/FooterDirective.js"></script>
 
     <!-- styles -->
     <link rel="stylesheet" href="public/styles/global.css">
@@ -77,9 +75,58 @@
 <body ng-app="app" ng-controller="AppController">
 <div class="wrapper">
     <div class="container">
-        <nav-header></nav-header>
+
+        <div id="nav-header">
+            <a href="#/home" analytics-on="click" analytics-event="Navigate" analytics-category="Header"
+               analytics-label="Home">
+                HOME
+            </a>
+            <a href="#/projects" analytics-on="click" analytics-event="Navigate" analytics-category="Header"
+               analytics-label="Projects">
+                PROJECTS
+            </a>
+            <a href="#/resume" analytics-on="click" analytics-event="Navigate" analytics-category="Header"
+               analytics-label="Resume">
+                RESUME
+            </a>
+            <a href="#/contact" analytics-on="click" analytics-event="Navigate" analytics-category="Header"
+               analytics-label="Contact">
+                CONTACT
+            </a>
+        </div>
+
+
         <div class="ngview" ng-view autoscroll="true"></div>
-        <footer></footer>
+
+        <div class="footer grey">
+            <div>
+                <a href="#/home" analytics-on="click" analytics-event="Navigate" analytics-category="Footer"
+                   analytics-label="Home">HOME</a>
+                <a href="#/projects" analytics-on="click" analytics-event="Navigate" analytics-category="Footer"
+                   analytics-label="Projects">PROJECTS</a>
+                <a href="#/resume" analytics-on="click" analytics-event="Navigate" analytics-category="Footer"
+                   analytics-label="Resume">RESUME</a>
+                <a href="#/contact" analytics-on="click" analytics-event="Navigate" analytics-category="Footer"
+                   analytics-label="Contact">CONTACT</a>
+            </div>
+            <div>
+                <a href="https://www.instagram.com/wong.vincent/" target="_blank" analytics-on="click"
+                   analytics-event="Instagram" analytics-category="Footer">
+                    <img src="public/img/instagram_white.png">
+                </a>
+                <a href="https://ca.linkedin.com/in/vincentw1" target="_blank" analytics-on="click"
+                   analytics-event="LinkedIn" analytics-category="Footer">
+                    <img src="public/img/linkedin_white.png">
+                </a>
+                <a href="mailto:" target="_top" analytics-on="click" analytics-event="Email"
+                   analytics-category="Footer">
+                    <img src="public/img/mail.png">
+                </a>
+            </div>
+            <div>&copy; {{year}} Vincent Wong</div>
+        </div>
+
+
     </div>
 </div>
 </body>
