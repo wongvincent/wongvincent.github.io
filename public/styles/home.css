@@ -27,9 +27,9 @@
     #home #banner #banner-image #banner-overlay {
       background-color: rgba(0, 50, 100, 0.6);
       width: 100%;
-      height: 100%; }
+      height: 100vh; }
       #home #banner #banner-image #banner-overlay #banner-heading {
-        padding-top: 50vh;
+        padding-top: calc(100vh / 2 - 100px);
         position: relative;
         text-align: center; }
         #home #banner #banner-image #banner-overlay #banner-heading #banner-title {
@@ -88,8 +88,8 @@
         font-weight: bold; }
       #home #aboutme #wrapper #text #body a {
         font-weight: bold;
-        color: #0000EE; }
+        color: #27598C; }
       #home #aboutme #wrapper #text #body a:hover {
-        color: #ffffff; }
+        color: #999999; }
 
 /*# sourceMappingURL=home.css.map */

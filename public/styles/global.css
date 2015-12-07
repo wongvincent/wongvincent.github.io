@@ -1,13 +1,9 @@
 @media screen and (max-width: 355px) {
-  #nav-header button {
-    padding: 20px 5px !important; }
+  #nav-header a {
+    font-size: 0.8em !important; } }
+@media screen and (min-width: 355px) and (max-width: 380px) {
   #nav-header a {
     font-size: 1.0em !important; } }
-@media screen and (min-width: 355px) and (max-width: 599px) {
-  #nav-header button {
-    padding: 20px 5px !important; }
-  #nav-header a {
-    font-size: 1.2em !important; } }
 * {
   margin: 0; }
 
@@ -21,7 +17,7 @@ a {
   text-decoration: none; }
 
 .white {
-  color: #dddddd; }
+  color: #eeeeee; }
 
 .grey {
   color: #a0a0a0; }
