@@ -118,10 +118,9 @@ $instagram-image-size: 200px;
         vertical-align: top;
         display: inline-block;
         max-width: 500px;
-        max-height: 350px;
         width: auto;
         padding: 25px;
-        font-size: 1.4em;
+        font-size: 1.2em;
         #heading {
           color: $blue;
           font-weight: bold;
@@ -130,7 +129,6 @@ $instagram-image-size: 200px;
         }
         #subheading {
           font-weight: bold;
-          font-size: 1.4em;
         }
         #body {
           a{
