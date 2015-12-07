@@ -30,7 +30,6 @@
     border-color: rgba(39, 89, 140, 0);
     padding: 20px; }
   #nav-header a {
-    text-decoration: none;
     color: #cccccc;
     font-size: 1.5em; }
   #nav-header a:hover {
@@ -47,10 +46,9 @@
     display: inline-block;
     margin: 0px 10px 15px;
     color: #bbbbbb;
-    font-weight: bold;
-    text-decoration: none; }
+    font-weight: bold; }
   .footer a:hover {
-    color: #dddddd; }
+    color: #eeeeee; }
   .footer img {
     width: 20px;
     height: 20px; }

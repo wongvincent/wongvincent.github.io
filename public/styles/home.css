@@ -39,7 +39,7 @@
 #home #life #pictures {
   text-align: center; }
   #home #life #pictures a {
-    margin: 0 10px;
+    margin: 10px;
     position: relative;
     display: inline-block; }
     #home #life #pictures a .text {
@@ -62,5 +62,36 @@
     #home #life #pictures a img {
       height: 200px;
       width: 200px; }
+#home #aboutme {
+  padding-bottom: 0; }
+  #home #aboutme #wrapper {
+    background: #eeeeee; }
+    #home #aboutme #wrapper img {
+      text-align: center;
+      display: inline-block;
+      max-height: 350px;
+      max-width: 100%; }
+    #home #aboutme #wrapper #text {
+      text-align: left;
+      vertical-align: top;
+      display: inline-block;
+      max-width: 500px;
+      max-height: 350px;
+      width: auto;
+      padding: 25px;
+      font-size: 1.4em; }
+      #home #aboutme #wrapper #text #heading {
+        color: #003264;
+        font-weight: bold;
+        font-size: 2em;
+        margin-bottom: 10px; }
+      #home #aboutme #wrapper #text #subheading {
+        font-weight: bold;
+        font-size: 1.4em; }
+      #home #aboutme #wrapper #text #body a {
+        font-weight: bold;
+        color: #0000EE; }
+      #home #aboutme #wrapper #text #body a:hover {
+        color: #ffffff; }
 
 /*# sourceMappingURL=home.css.map */

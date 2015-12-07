@@ -1,4 +1,4 @@
-$blue : #003264;
+$blue: #003264;
 $banner-background-color: rgba(0, 50, 100, 0.6);
 $instagram-image-size: 200px;
 
@@ -20,10 +20,10 @@ $instagram-image-size: 200px;
   .panels + .panels {
     padding: 65px 0;
 
-    .heading{
+    .heading {
       color: $blue;
       font-size: 3em;
-      font-weight:bold;
+      font-weight: bold;
       padding-bottom: 40px;
     }
   }
@@ -65,15 +65,15 @@ $instagram-image-size: 200px;
     }
   }
 
-  #life{
-    #pictures{
+  #life {
+    #pictures {
       text-align: center;
       a {
-        margin: 0 10px;
+        margin: 10px;
         position: relative;
         display: inline-block;
 
-        .text{
+        .text {
           position: absolute;
           top: 0;
           color: white;
@@ -90,19 +90,58 @@ $instagram-image-size: 200px;
           transition: all 0.5s ease;
         }
 
-        .text:hover{
+        .text:hover {
           opacity: 1;
         }
 
-        img{
+        img {
           height: $instagram-image-size;
           width: $instagram-image-size;
         }
       }
+    }
+  }
 
+  #aboutme {
+    padding-bottom: 0;
+    #wrapper {
+      background: #eeeeee;
+      img {
+        text-align: center;
+        display: inline-block;
+        max-height: 350px;
+        max-width: 100%;
+      }
 
-
-
+      #text {
+        text-align: left;
+        vertical-align: top;
+        display: inline-block;
+        max-width: 500px;
+        max-height: 350px;
+        width: auto;
+        padding: 25px;
+        font-size: 1.4em;
+        #heading {
+          color: $blue;
+          font-weight: bold;
+          font-size: 2em;
+          margin-bottom: 10px;
+        }
+        #subheading {
+          font-weight: bold;
+          font-size: 1.4em;
+        }
+        #body {
+          a{
+            font-weight: bold;
+            color: #0000EE;
+          }
+          a:hover{
+            color:#ffffff;
+          }
+        }
+      }
     }
   }
 }
