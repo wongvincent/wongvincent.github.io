@@ -1,8 +1,3 @@
-$blue: #27598C;
-$footer-height: 85px;
-$footer-top-bot-padding: 50px;
-$nav-header-height: 63px;
-
 .nav-header-div{
   height: $nav-header-height;
 }
@@ -25,7 +20,6 @@ $nav-header-height: 63px;
 }
 
 
-
 .middle-of-page {
   top: $nav-header-height;
   left: 0px;
@@ -38,6 +32,30 @@ $nav-header-height: 63px;
     top: calc(50vh - #{$footer-height} - #{$nav-header-height});
   }
 }
+
+
+.not-home {
+  background: #387fc8;
+  width: 100%;
+  min-height: $full-height;
+  text-align: center;
+
+  #top {
+    height: 400px;
+
+    #text {
+      font-weight: bold;
+      font-size: 4.5em;
+      padding: 60px 8px 30px;
+    }
+  }
+
+  #body {
+    min-height: 60vh;
+    background-color: white;
+  }
+}
+
 
 #nav-header{
   text-align: center;

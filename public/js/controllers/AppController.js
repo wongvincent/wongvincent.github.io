@@ -21,8 +21,8 @@ app.config(['$routeProvider', '$locationProvider', '$analyticsProvider', functio
             templateUrl: 'views/resume.html'
         })
         .when('/contact', {
-            redirectTo: '/underconstruction'
-            //templateUrl: 'views/contact.html'
+            //redirectTo: '/underconstruction'
+            templateUrl: 'views/contact.html'
         })
         .when('/underconstruction', {
             templateUrl: 'views/underconstruction.html',
