@@ -51,6 +51,16 @@ app.config(['$routeProvider', '$locationProvider', '$analyticsProvider', functio
             $el.removeClass('animated bounceInDown');
         };
 
+        $scope.animateInFadeIn = function($el) {
+            $el.removeClass('hidden');
+            $el.addClass('animated fadeIn');
+        };
+
+        $scope.animateOutFadeIn = function($el) {
+            $el.addClass('hidden');
+            $el.removeClass('animated fadeIn');
+        };
+
         $scope.animateInFadeInDown = function($el) {
             $el.removeClass('hidden');
             $el.addClass('animated fadeInDown');

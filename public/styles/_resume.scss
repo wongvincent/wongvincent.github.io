@@ -2,16 +2,14 @@
   #top {
     #view-resume {
       a {
-        padding: 20px;
+        padding: 15px 25px;
         font-size: 1.2em;
         color: #eeeeee;
-        border: 3px solid #eeeeee;
+        border: 2px solid #eeeeee;
         background: #444444;
       }
       a:hover {
-        color: $dark-blue;
-        background: #eeeeee;
-        border-color: $dark-blue;
+        background: #333333;
       }
     }
   }

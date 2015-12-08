@@ -3,7 +3,7 @@
 }
 
 .wrapper {
-  min-height: calc(100% - #{$footer-top-bot-padding} * 2);
+  min-height: calc(100% - #{$footer-total-top-bot-padding});
   height: auto !important;
   margin: 0 auto;
   margin-bottom: -$footer-height; /* the bottom margin is the negative value of the footer's height */
@@ -24,7 +24,7 @@
   top: $nav-header-height;
   left: 0px;
   width: 100%;
-  height: calc(100vh - #{$footer-height} - #{$nav-header-height} - 37px);
+  height: calc(#{$view-height});
   text-align: center;
 
   div {
@@ -37,21 +37,22 @@
 .not-home {
   background: #387fc8;
   width: 100%;
-  min-height: $full-height;
+  min-height: calc(#{$view-height});
   text-align: center;
 
   #top {
-    height: 400px;
+    height: $not-home-top;
 
     #text {
       font-weight: bold;
       font-size: 4.5em;
-      padding: 60px 8px 30px;
+      padding: 40px 8px 30px;
     }
   }
 
   #body {
-    min-height: 60vh;
+    min-height: calc(#{$not-home-body});
+    height: auto;
     background-color: white;
   }
 }
@@ -95,7 +96,7 @@
 
   background: #2b2b2b;
   width: 100%;
-  padding: $footer-top-bot-padding 0;
+  padding: $footer-padding 0;
   font-size: 0.9em;
   text-align: center;
   height: $footer-height;

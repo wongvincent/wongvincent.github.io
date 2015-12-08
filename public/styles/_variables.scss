@@ -8,7 +8,12 @@ $full-height: 100vh;
 $nav-header-height: 63px;
 
 $footer-height: 85px;
-$footer-top-bot-padding: 50px;
+$footer-padding: 40px 0 60px; //when changed, update $footer-total-top-bot-padding
+$footer-total-top-bot-padding: 100px;
+
+$view-height: #{$full-height} - #{$nav-header-height} - #{$footer-height} - 37px;
+$not-home-top: 300px;
+$not-home-body: #{$view-height} - 300px;
 
 
 //Home
