@@ -13,12 +13,12 @@ app.config(['$routeProvider', '$locationProvider', '$analyticsProvider', functio
             redirectTo: '/'
         })
         .when('/projects', {
-            redirectTo: '/underconstruction'
-            //templateUrl: 'views/projects.html'
+            //redirectTo: '/underconstruction'
+            templateUrl: 'views/projects.html'
         })
         .when('/resume', {
-            redirectTo: '/underconstruction'
-            //templateUrl: 'views/resume.html'
+            //redirectTo: '/underconstruction'
+            templateUrl: 'views/resume.html'
         })
         .when('/contact', {
             //redirectTo: '/underconstruction'
@@ -41,14 +41,12 @@ app.config(['$routeProvider', '$locationProvider', '$analyticsProvider', functio
 
 
         //leverages animate.css classes
+
+        //ANIMATE IN
+
         $scope.animateInBounceInDown = function($el) {
             $el.removeClass('hidden');
             $el.addClass('animated bounceInDown');
-        };
-
-        $scope.animateOutBounceInDown = function($el) {
-            $el.addClass('hidden');
-            $el.removeClass('animated bounceInDown');
         };
 
         $scope.animateInFadeIn = function($el) {
@@ -56,19 +54,9 @@ app.config(['$routeProvider', '$locationProvider', '$analyticsProvider', functio
             $el.addClass('animated fadeIn');
         };
 
-        $scope.animateOutFadeIn = function($el) {
-            $el.addClass('hidden');
-            $el.removeClass('animated fadeIn');
-        };
-
         $scope.animateInFadeInDown = function($el) {
             $el.removeClass('hidden');
             $el.addClass('animated fadeInDown');
-        };
-
-        $scope.animateOutFadeInDown = function($el) {
-            $el.addClass('hidden');
-            $el.removeClass('animated fadeInDown');
         };
 
         $scope.animateInFadeInDownBig = function($el) {
@@ -76,19 +64,9 @@ app.config(['$routeProvider', '$locationProvider', '$analyticsProvider', functio
             $el.addClass('animated fadeInDownBig');
         };
 
-        $scope.animateOutFadeInDownBig = function($el) {
-            $el.addClass('hidden');
-            $el.removeClass('animated fadeInDownBig');
-        };
-
         $scope.animateInFadeInUp = function($el) {
             $el.removeClass('hidden');
             $el.addClass('animated fadeInUp');
-        };
-
-        $scope.animateOutFadeInUp = function($el) {
-            $el.addClass('hidden');
-            $el.removeClass('animated fadeInUp');
         };
 
         $scope.animateInFlipInX = function($el) {
@@ -96,29 +74,18 @@ app.config(['$routeProvider', '$locationProvider', '$analyticsProvider', functio
             $el.addClass('animated flipInX');
         };
 
-        $scope.animateOutFlipInX = function($el) {
-            $el.addClass('hidden');
-            $el.removeClass('animated flipInX');
-        };
-
         $scope.animateInPulse = function($el) {
             $el.removeClass('hidden');
             $el.addClass('animated pulse');
-        };
-
-        $scope.animateOutPulse = function($el) {
-            $el.addClass('hidden');
-            $el.removeClass('animated pulse');
         };
 
         $scope.animateInTada = function($el) {
             $el.removeClass('hidden');
             $el.addClass('animated tada');
         };
-
-        $scope.animateOutTada = function($el) {
-            $el.addClass('hidden');
-            $el.removeClass('animated tada');
+        $scope.animateInZoomIn = function($el) {
+            $el.removeClass('hidden');
+            $el.addClass('animated zoomIn');
         };
 
         $scope.animateInZoomInUp = function($el) {
@@ -126,8 +93,17 @@ app.config(['$routeProvider', '$locationProvider', '$analyticsProvider', functio
             $el.addClass('animated zoomInUp');
         };
 
-        $scope.animateOutZoomInUp = function($el) {
+
+
+        //ANIMATE OUT
+
+        $scope.animateOutFlipOutX = function($el) {
             $el.addClass('hidden');
-            $el.removeClass('animated zoomInUp');
+            $el.removeClass('animated flipOutX');
+        };
+
+        $scope.animateOutZoomOut = function($el) {
+            $el.addClass('hidden');
+            $el.removeClass('animated zoomOut');
         };
     });

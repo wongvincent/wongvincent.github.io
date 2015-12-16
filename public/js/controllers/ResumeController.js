@@ -12,5 +12,4 @@ app.controller("ResumeController", ["$scope", function($scope){
         "SCSS/LESS";
 
     $scope.withExperience = withExperienceString.split(';');
-    console.log($scope.withExperience);
 }]);

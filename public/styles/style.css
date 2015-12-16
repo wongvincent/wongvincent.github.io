@@ -209,6 +209,28 @@ a {
       #home #aboutme #wrapper #text #body a:hover {
         color: #999999; }
 
+#projects #body #body2 {
+  text-align: center; }
+  #projects #body #body2 .item {
+    text-align: left;
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px;
+    border: 2px solid #777777;
+    width: 400px;
+    max-width: calc(100% - 10px * 2); }
+    #projects #body #body2 .item .title {
+      font-weight: bold;
+      font-size: 1.4em; }
+    #projects #body #body2 .item .description {
+      font-size: 1em;
+      color: #666666;
+      margin: 10px 0; }
+    #projects #body #body2 .item .technologies {
+      font-size: 1em; }
+    #projects #body #body2 .item .picture {
+      text-align: center; }
+
 #resume #top #view-resume a {
   padding: 15px 25px;
   font-size: 1.2em;
