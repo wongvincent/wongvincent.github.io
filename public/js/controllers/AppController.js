@@ -13,12 +13,12 @@ app.config(['$routeProvider', '$locationProvider', '$analyticsProvider', functio
             redirectTo: '/'
         })
         .when('/projects', {
-            //redirectTo: '/underconstruction'
-            templateUrl: 'views/projects.html'
+            redirectTo: '/underconstruction'
+            //templateUrl: 'views/projects.html'
         })
         .when('/resume', {
-            //redirectTo: '/underconstruction'
-            templateUrl: 'views/resume.html'
+            redirectTo: '/underconstruction'
+            //templateUrl: 'views/resume.html'
         })
         .when('/contact', {
             //redirectTo: '/underconstruction'
