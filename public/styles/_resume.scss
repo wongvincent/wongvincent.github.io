@@ -13,4 +13,44 @@
       }
     }
   }
+
+  #body {
+    #body2 {
+      .module {
+        padding: 20px 0;
+        text-align: left;
+        .title {
+          vertical-align: top;
+          font-size: 1.6em;
+          font-weight: bold;
+          display: inline-block;
+          width: 300px;
+          padding-bottom: 20px;
+        }
+        .content {
+          display: inline-block;
+          li{
+            line-height: 1.5em;
+          }
+          .item {
+            padding-bottom: 25px;
+            .heavier{
+              font-weight: 600;
+            }
+            .heading {
+              font-weight: bold;
+              font-size: 1.4em;
+              padding-bottom: 5px;
+            }
+            .subheading {
+              font-size: 1.2em;
+            }
+            .details {
+              font-size: 1em;
+            }
+          }
+        }
+      }
+    }
+  }
 }

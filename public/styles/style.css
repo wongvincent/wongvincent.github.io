@@ -54,21 +54,30 @@ a {
     position: relative;
     top: calc(50vh - 85px - 63px); }
 
-.not-home {
+#projects, #resume, #contact {
   background: #387fc8;
   width: 100%;
   min-height: calc(100vh - 63px - 85px - 37px);
   text-align: center; }
-  .not-home #top {
+  #projects #top, #resume #top, #contact #top {
     height: 300px; }
-    .not-home #top #text {
+    #projects #top #text, #resume #top #text, #contact #top #text {
       font-weight: bold;
       font-size: 4.5em;
       padding: 40px 8px 30px; }
-  .not-home #body {
+  #projects #body, #resume #body, #contact #body {
+    color: #333333;
+    max-width: 100vw;
     min-height: calc(100vh - 63px - 85px - 37px - 300px);
     height: auto;
-    background-color: white; }
+    background: #eeeeee; }
+    #projects #body #body2, #resume #body #body2, #contact #body #body2 {
+      max-width: calc(100vw - 20px * 2);
+      width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+      padding: 30px 20px 60px 20px; }
 
 #nav-header {
   text-align: center;
@@ -208,41 +217,60 @@ a {
   background: #444444; }
 #resume #top #view-resume a:hover {
   background: #333333; }
-
-#contact #body {
-  max-width: 100vw; }
-  #contact #body #contact-info {
+#resume #body #body2 .module {
+  padding: 20px 0;
+  text-align: left; }
+  #resume #body #body2 .module .title {
+    vertical-align: top;
     font-size: 1.6em;
+    font-weight: bold;
+    display: inline-block;
     width: 300px;
-    max-width: 99vw;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-    padding: 30px 20px 60px; }
-    #contact #body #contact-info #contact-info2 #name {
-      font-weight: bold;
-      font-size: 1.6em; }
-    #contact #body #contact-info #contact-info2 #email a {
-      color: #27598c;
-      text-decoration: underline; }
-    #contact #body #contact-info #contact-info2 #email a:hover {
-      color: #003264; }
-    #contact #body #contact-info #contact-info2 #icons {
-      padding: 20px 0; }
-      #contact #body #contact-info #contact-info2 #icons img {
-        width: 40px;
-        height: 40px;
-        background-color: #444444; }
-      #contact #body #contact-info #contact-info2 #icons img:hover {
-        background-color: #222222; }
-    #contact #body #contact-info #contact-info2 #view-resume a {
-      padding: 15px 25px;
-      font-size: 0.7em;
-      color: white;
-      border: 2px solid white;
-      background: #27598c; }
-    #contact #body #contact-info #contact-info2 #view-resume a:hover {
-      background: #003264; }
+    padding-bottom: 20px; }
+  #resume #body #body2 .module .content {
+    display: inline-block; }
+    #resume #body #body2 .module .content li {
+      line-height: 1.5em; }
+    #resume #body #body2 .module .content .item {
+      padding-bottom: 25px; }
+      #resume #body #body2 .module .content .item .heavier {
+        font-weight: 600; }
+      #resume #body #body2 .module .content .item .heading {
+        font-weight: bold;
+        font-size: 1.4em;
+        padding-bottom: 5px; }
+      #resume #body #body2 .module .content .item .subheading {
+        font-size: 1.2em; }
+      #resume #body #body2 .module .content .item .details {
+        font-size: 1em; }
+
+#contact #body #body2 {
+  font-size: 1.6em;
+  width: 300px !important; }
+  #contact #body #body2 #contact-info #name {
+    font-weight: bold;
+    font-size: 1.6em; }
+  #contact #body #body2 #contact-info #email a {
+    color: #27598c;
+    text-decoration: underline; }
+  #contact #body #body2 #contact-info #email a:hover {
+    color: #003264; }
+  #contact #body #body2 #contact-info #icons {
+    padding: 20px 0; }
+    #contact #body #body2 #contact-info #icons img {
+      width: 40px;
+      height: 40px;
+      background-color: #444444; }
+    #contact #body #body2 #contact-info #icons img:hover {
+      background-color: #222222; }
+  #contact #body #body2 #contact-info #view-resume a {
+    padding: 15px 25px;
+    font-size: 0.7em;
+    color: white;
+    border: 2px solid white;
+    background: #27598c; }
+  #contact #body #body2 #contact-info #view-resume a:hover {
+    background: #003264; }
 
 .typed-cursor {
   opacity: 1;

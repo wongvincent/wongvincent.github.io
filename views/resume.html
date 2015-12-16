@@ -1,15 +1,84 @@
-<div id="resume" class="not-home">
+<div id="resume" ng-controller="ResumeController">
     <div id="top">
         <div class="nav-header-div"></div>
         <div id="text" class="white hidden" when-visible="animateInFadeInDown">Résumé</div>
         <div id="view-resume" when-visible="animateInFadeInUp" class="hidden">
-            <a href="https://docs.google.com/viewer?url=http://vincentw.me/vincent_wong_resume.pdf" target="_blank" analytics-on="click" analytics-event="View Resume" analytics-category="Resume">
+            <a href="https://docs.google.com/viewer?url=http://vincentw.me/vincent_wong_resume.pdf" target="_blank"
+               analytics-on="click" analytics-event="View Resume" analytics-category="Resume">
                 VIEW RESUME
             </a>
         </div>
     </div>
 
     <div id="body">
+        <div id="body2">
+            <div class="module" id="technologies">
+                <div class="title">
+                    TECHNOLOGIES
+                </div>
+                <div class="content">
+                    <div class="item">
+                        <div class="heading">
+                            Experience With
+                        </div>
+                        <div class="subheading">
 
+                        </div>
+                        <div class="details">
+                            <ul>
+                                <li ng-repeat="item in withExperience">{{item}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="module" id="experience">
+                <div class="title">
+                    WORK EXPERIENCE
+                </div>
+                <div class="content">
+                    <div class="item">
+                        <div class="heading">
+                            Software Developer Intern
+                        </div>
+                        <div class="subheading">
+                            <span class="heavier">SAP Canada Inc.,</span> Vancouver, BC, January 2016 - September 2016
+                        </div>
+                        <div class="details">
+
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="heading">
+                            Software Developer Co-op
+                        </div>
+                        <div class="subheading">
+                            <span class="heavier">Ingenium Technologies Corp.,</span> Vancouver, BC, January 2015 - August 2015
+                        </div>
+                        <div class="details">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="module" id="education">
+                <div class="title">
+                    EDUCATION
+                </div>
+                <div class="content">
+                    <div class="item">
+                        <div class="heading">
+                            Bachelor of Science
+                        </div>
+                        <div class="subheading">
+                            <span class="heavier">Computer Science</span>
+                        </div>
+                        <div class="details">
+                            University of British Columbia, Vancouver, BC, 2011-2017
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
