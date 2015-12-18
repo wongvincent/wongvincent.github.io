@@ -30,10 +30,10 @@
     z-index: -99;
 
     #banner-image {
-      background: url('../img/burnaby.jpg');
-      background-repeat: round;
+      background: url('../img/burnaby.jpg') no-repeat center center;
       height: $full-height;
       width: 100%;
+      background-size: cover;
 
       #banner-overlay {
         background-color: $banner-background-color;
