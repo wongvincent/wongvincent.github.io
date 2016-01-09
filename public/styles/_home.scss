@@ -67,14 +67,14 @@
         margin: 10px;
         position: relative;
         display: inline-block;
-        -webkit-backface-visibility: hidden; // needed to get flipInX to work in iOS
-        -webkit-transform: translate3d(0,0,0); // needed to get flipInX to work in iOS
+        //-webkit-backface-visibility: hidden; // needed to get flipInX to work in iOS
+        //-webkit-transform: translate3d(0,0,0); // needed to get flipInX to work in iOS
 
         .text {
           position: absolute;
           top: 0;
           color: white;
-          background-color: $banner-background-color;
+          background-color: rgba(0, 50, 100, 0.6);
           width: $instagram-image-size;
           height: $instagram-image-size;
           line-height: $instagram-image-size;

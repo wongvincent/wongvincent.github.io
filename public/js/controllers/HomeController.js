@@ -1,6 +1,6 @@
 var app = angular.module('app')
 
-    .controller('HomeController', function ($scope) {
+    .controller('HomeController', ['$scope', function ($scope) {
         $scope.instagramPics = [
             {
                 "href": "https://www.instagram.com/p/-zawaiKW5F/",
@@ -28,4 +28,4 @@ var app = angular.module('app')
                 "text": "Coal Harbour"
             }
         ]
-    });
+    }]);

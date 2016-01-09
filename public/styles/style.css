@@ -154,14 +154,12 @@ a {
   #home #life #pictures a {
     margin: 10px;
     position: relative;
-    display: inline-block;
-    -webkit-backface-visibility: hidden;
-    -webkit-transform: translate3d(0, 0, 0); }
+    display: inline-block; }
     #home #life #pictures a .text {
       position: absolute;
       top: 0;
       color: white;
-      background-color: rgba(30, 70, 120, 0.2);
+      background-color: rgba(0, 50, 100, 0.6);
       width: 200px;
       height: 200px;
       line-height: 200px;
