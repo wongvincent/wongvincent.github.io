@@ -1,8 +1,9 @@
 .typed-cursor {
   opacity: 1;
-  -webkit-animation: blink 0.7s infinite;
-  -moz-animation: blink 0.7s infinite;
-  animation: blink 0.7s infinite;
+  -webkit-animation: blink 1.0s infinite;
+  -moz-animation: blink 1.0s infinite;
+  animation: blink 1.0s infinite;
+  color: #0A0;
 }
 @keyframes blink {
   0% {
@@ -38,8 +39,8 @@
   }
 }
 .typewriter {
-  font-family: Consolas, monaco, monospace;
+  font-family: Courier, monospace;
   font-weight: bold;
-  font-size: 2.5em;
-  color: #666362;
+  font-size: 2.3em;
+  color: black;
 }
