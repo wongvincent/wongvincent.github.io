@@ -203,7 +203,7 @@ a {
         font-weight: bold; }
       #home #aboutme #wrapper #text #body a {
         font-weight: bold;
-        color: #27598c; }
+        color: #27598C; }
       #home #aboutme #wrapper #text #body a:hover {
         color: #999999; }
 
@@ -238,7 +238,7 @@ a {
 #resume #top #view-resume a:hover {
   background: #333333; }
 #resume #body #body2 .module {
-  padding: 20px 0;
+  padding: 10px 0 20px;
   text-align: left; }
   #resume #body #body2 .module .title {
     vertical-align: top;
@@ -246,23 +246,27 @@ a {
     font-weight: bold;
     display: inline-block;
     width: 300px;
-    padding-bottom: 20px; }
+    padding-bottom: 15px; }
   #resume #body #body2 .module .content {
     display: inline-block; }
     #resume #body #body2 .module .content li {
       line-height: 1.5em; }
-    #resume #body #body2 .module .content .item {
-      padding-bottom: 25px; }
-      #resume #body #body2 .module .content .item .heavier {
-        font-weight: 600; }
-      #resume #body #body2 .module .content .item .heading {
-        font-weight: bold;
-        font-size: 1.4em;
-        padding-bottom: 5px; }
-      #resume #body #body2 .module .content .item .subheading {
-        font-size: 1.2em; }
-      #resume #body #body2 .module .content .item .details {
-        font-size: 1em; }
+    #resume #body #body2 .module .content .item .heavier {
+      font-weight: 600; }
+    #resume #body #body2 .module .content .item .heading {
+      font-weight: bold;
+      font-size: 1.4em;
+      padding-bottom: 5px; }
+    #resume #body #body2 .module .content .item .subheading {
+      font-size: 1.2em; }
+    #resume #body #body2 .module .content .item .details {
+      font-size: 1em; }
+#resume #body #body2 #work-experience .item {
+  padding-bottom: 10px; }
+  #resume #body #body2 #work-experience .item .details {
+    padding: 5px; }
+    #resume #body #body2 #work-experience .item .details li {
+      padding: 2px 0; }
 
 #contact #body #body2 {
   font-size: 1.6em;
@@ -271,7 +275,7 @@ a {
     font-weight: bold;
     font-size: 1.6em; }
   #contact #body #body2 #contact-info #email a {
-    color: #27598c;
+    color: #27598C;
     text-decoration: underline; }
   #contact #body #body2 #contact-info #email a:hover {
     color: #003264; }
@@ -288,7 +292,7 @@ a {
     font-size: 0.7em;
     color: white;
     border: 2px solid white;
-    background: #27598c; }
+    background: #27598C; }
   #contact #body #body2 #contact-info #view-resume a:hover {
     background: #003264; }
 
@@ -302,35 +306,28 @@ a {
 @keyframes blink {
   0% {
     opacity: 1; }
-
   50% {
     opacity: 0; }
-
   100% {
     opacity: 1; } }
-
 @-webkit-keyframes blink {
   0% {
     opacity: 1; }
-
   50% {
     opacity: 0; }
-
   100% {
     opacity: 1; } }
-
 @-moz-keyframes blink {
   0% {
     opacity: 1; }
-
   50% {
     opacity: 0; }
-
   100% {
     opacity: 1; } }
-
 .typewriter {
   font-family: Courier, monospace;
   font-weight: bold;
   font-size: 2.3em;
   color: black; }
+
+/*# sourceMappingURL=style.css.map */

@@ -6,6 +6,7 @@ app.config(['$routeProvider', '$locationProvider', '$analyticsProvider', functio
 
     $routeProvider
         .when('/', {
+            //redirectTo: '/underconstruction'
             templateUrl: 'views/home.html',
             controller: 'HomeController'
         })
@@ -14,13 +15,13 @@ app.config(['$routeProvider', '$locationProvider', '$analyticsProvider', functio
         })
         .when('/projects', {
             redirectTo: '/underconstruction'
-            //templateUrl: 'views/projects.html'
+            //templateUrl: 'views/projects.html',
             //controller: 'ProjectsController'
         })
         .when('/resume', {
-            redirectTo: '/underconstruction'
-            //templateUrl: 'views/resume.html'
-            // controller: 'ResumeController'
+            //redirectTo: '/underconstruction'
+            templateUrl: 'views/resume.html',
+            controller: 'ResumeController'
         })
         .when('/contact', {
             //redirectTo: '/underconstruction'
