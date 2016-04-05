@@ -137,6 +137,23 @@
           a:hover {
             color: #999999;
           }
+          div.images {
+            margin-top: 10px;
+            div {
+              display: inline-block;
+              width: calc(#{$about-me-image-size} + #{$image-size-increase-on-hover} * 2);
+              text-align: center;
+              img {
+                width: $about-me-image-size;
+                height: $about-me-image-size;
+                vertical-align: top;
+              }
+              img:hover {
+                width: calc(#{$about-me-image-size} + #{$image-size-increase-on-hover});
+                height: calc(#{$about-me-image-size} + #{$image-size-increase-on-hover});
+              }
+            }
+          }
         }
       }
     }

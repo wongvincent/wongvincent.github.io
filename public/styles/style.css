@@ -107,9 +107,19 @@ a {
     font-weight: bold; }
   .footer a:hover {
     color: #eeeeee; }
-  .footer img {
-    width: 20px;
-    height: 20px; }
+  .footer div.images {
+    height: 40px; }
+    .footer div.images div {
+      display: inline-block;
+      width: calc(20px + 5px * 2);
+      text-align: center; }
+      .footer div.images div img {
+        width: 20px;
+        height: 20px;
+        vertical-align: middle; }
+      .footer div.images div img:hover {
+        width: calc(20px + 5px);
+        height: calc(20px + 5px); }
 
 #home .panels {
   position: relative;
@@ -206,6 +216,19 @@ a {
         color: #27598C; }
       #home #aboutme #wrapper #text #body a:hover {
         color: #999999; }
+      #home #aboutme #wrapper #text #body div.images {
+        margin-top: 10px; }
+        #home #aboutme #wrapper #text #body div.images div {
+          display: inline-block;
+          width: calc(45px + 5px * 2);
+          text-align: center; }
+          #home #aboutme #wrapper #text #body div.images div img {
+            width: 45px;
+            height: 45px;
+            vertical-align: top; }
+          #home #aboutme #wrapper #text #body div.images div img:hover {
+            width: calc(45px + 5px);
+            height: calc(45px + 5px); }
 
 #projects #body #body2 {
   text-align: center; }

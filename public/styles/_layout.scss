@@ -99,10 +99,22 @@
   a:hover{
     color: #eeeeee;
   }
-
-  img {
-    width: 20px;
-    height: 20px;
+  div.images {
+    height: 40px;
+    div {
+      display: inline-block;
+      width: calc(#{$footer-image-size} + #{$image-size-increase-on-hover} * 2);
+      text-align: center;
+      img {
+        width: $footer-image-size;
+        height: $footer-image-size;
+        vertical-align: middle;
+      }
+      img:hover {
+        width: calc(#{$footer-image-size} + #{$image-size-increase-on-hover});
+        height: calc(#{$footer-image-size} + #{$image-size-increase-on-hover});
+      }
+    }
   }
 
   background: #2b2b2b;
