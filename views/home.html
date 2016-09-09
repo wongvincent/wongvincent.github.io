@@ -3,32 +3,16 @@
         <div id="banner-image">
             <div id="banner-overlay">
                 <div when-visible="animateInFadeInDown" class="hidden" id="banner-heading">
-                    <div id="banner-title">Hello World</div>
+                    <div id="banner-title">HI, I'M VINCENT</div>
                     <div id="banner-subtitle"></div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="myprojects" class="panels">
-        <div class="heading">Lovely Projects</div>
-    </div>
-
-    <div id="life" class="panels">
-        <div class="heading">Life in Pictures</div>
-        <div id="pictures">
-            <a ng-href="{{pic.href}}" target="_blank" ng-repeat="pic in instagramPics">
-                <span class="text">
-                    {{pic.text}}
-                </span>
-                <img ng-src="{{pic.img}}" when-visible="animateInZoomIn" class="hidden">
-            </a>
-        </div>
-    </div>
-
-    <div id="aboutme" class="panels">
+    <div id="about" class="panels">
         <div id="wrapper">
-            <!--<img src="public/img/me2.jpg">--> 
+            <img src="public/img/me.jpg">
 
             <div id="text">
                 <div id="heading">
@@ -43,25 +27,25 @@
                     <br><br>
                     Feel free to connect with me!
                     <div class="images">
-                        <div>
+                        <div when-visible="animateTada">
                             <a href="https://github.com/wongvincent" target="_blank" analytics-on="click"
                                analytics-event="GitHub" analytics-category="AboutMe">
                                 <img src="public/img/github_dark_64.png">
                             </a>
                         </div>
-                        <div>
+                        <div when-visible="animateTada">
                             <a href="https://ca.linkedin.com/in/vincentw1" target="_blank" analytics-on="click"
                                analytics-event="LinkedIn" analytics-category="AboutMe">
                                 <img src="public/img/linkedin_dark_64.png">
                             </a>
                         </div>
-                        <div>
+                        <div when-visible="animateTada">
                             <a href="mailto:hello@vincentwong.me" target="_top" analytics-on="click" analytics-event="Email"
                                analytics-category="AboutMe">
                                 <img src="public/img/mail_dark_64.png">
                             </a>
                         </div>
-                        <div>
+                        <div when-visible="animateTada">
                             <a href="https://www.instagram.com/wong.vincent/" target="_blank" analytics-on="click"
                                analytics-event="Instagram" analytics-category="AboutMe">
                                 <img src="public/img/instagram_dark_64.png">
@@ -70,6 +54,22 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div id="projects" class="panels">
+        <div class="heading">Projects</div>
+    </div>
+
+    <div id="photos" class="panels">
+        <div class="heading">Photos</div>
+        <div>
+            <a ng-href="{{pic.href}}" target="_blank" ng-repeat="pic in instagramPics">
+                <span class="text">
+                    {{pic.text}}
+                </span>
+                <img ng-src="{{pic.img}}" when-visible="animateInZoomIn" class="hidden">
+            </a>
         </div>
     </div>
 

@@ -46,9 +46,16 @@
           text-align: center;
 
           #banner-title {
-            font-size: 100px;
+            padding: 0 20px;
             font-weight: bold;
+            font-size: 90px;
             color: white;
+          }
+
+          @media (max-width: 459px) { //nexus 4-6, iphone 4, 5, 6, 6+
+            #banner-title {
+              font-size: 65px;
+            }
           }
 
           #banner-subtitle {
@@ -60,48 +67,46 @@
     }
   }
 
-  #life {
-    #pictures {
-      text-align: center;
-      a {
-        margin: 10px;
-        position: relative;
-        display: inline-block;
-        //-webkit-backface-visibility: hidden; // needed to get flipInX to work in iOS
-        //-webkit-transform: translate3d(0,0,0); // needed to get flipInX to work in iOS
+  #photos {
+    text-align: center;
+    a {
+      margin: 10px;
+      position: relative;
+      display: inline-block;
+      //-webkit-backface-visibility: hidden; // needed to get flipInX to work in iOS
+      //-webkit-transform: translate3d(0,0,0); // needed to get flipInX to work in iOS
 
-        .text {
-          position: absolute;
-          top: 0;
-          color: white;
-          background-color: rgba(0, 50, 100, 0.6);
-          width: $instagram-image-size;
-          height: $instagram-image-size;
-          line-height: $instagram-image-size;
-          text-align: center;
-          z-index: 10;
-          opacity: 0;
-          -webkit-transition: all 0.5s ease;
-          -moz-transition: all 0.5s ease;
-          -o-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-        }
+      .text {
+        position: absolute;
+        top: 0;
+        color: white;
+        background-color: rgba(0, 50, 100, 0.6);
+        width: $instagram-image-size;
+        height: $instagram-image-size;
+        line-height: $instagram-image-size;
+        text-align: center;
+        z-index: 10;
+        opacity: 0;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+      }
 
-        .text:hover {
-          opacity: 1;
-        }
+      .text:hover {
+        opacity: 1;
+      }
 
-        img {
-          height: $instagram-image-size;
-          width: $instagram-image-size;
-          -webkit-backface-visibility: hidden; // needed to get flipInX to work in iOS
-          -webkit-transform: translate3d(0,0,0); // needed to get flipInX to work in iOS
-        }
+      img {
+        height: $instagram-image-size;
+        width: $instagram-image-size;
+        -webkit-backface-visibility: hidden; // needed to get flipInX to work in iOS
+        -webkit-transform: translate3d(0, 0, 0); // needed to get flipInX to work in iOS
       }
     }
   }
 
-  #aboutme {
+  #about {
     padding-bottom: 0;
     #wrapper {
       background: #eeeeee;

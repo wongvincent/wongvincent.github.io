@@ -73,6 +73,8 @@
   text-align: center;
   z-index: 1000;
   height: $nav-header-height;
+  position: fixed;
+  width: 100%;
 
   a{
     color: #cccccc;

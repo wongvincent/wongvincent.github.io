@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ngRoute', 'angular-scroll-animate', 'angulartics', 'angulartics.google.analytics']);
+var app = angular.module('app', ['ngRoute', 'angular-scroll-animate', 'angulartics', 'angulartics.google.analytics', 'smooth-scroll']);
 
 app.config(['$routeProvider', '$locationProvider', '$analyticsProvider', function ($routeProvider, $locationProvider, $analyticsProvider) {
 
@@ -13,20 +13,6 @@ app.config(['$routeProvider', '$locationProvider', '$analyticsProvider', functio
         .when('/home', {
             redirectTo: '/'
         })
-        .when('/projects', {
-            redirectTo: '/underconstruction'
-            //templateUrl: 'views/projects.html',
-            //controller: 'ProjectsController'
-        })
-        .when('/resume', {
-            //redirectTo: '/underconstruction'
-            templateUrl: 'views/resume.html',
-            controller: 'ResumeController'
-        })
-        .when('/contact', {
-            //redirectTo: '/underconstruction'
-            templateUrl: 'views/contact.html'
-        })
         .when('/underconstruction', {
             templateUrl: 'views/underconstruction.html',
         })
@@ -38,12 +24,19 @@ app.config(['$routeProvider', '$locationProvider', '$analyticsProvider', functio
     $analyticsProvider.withAutoBase(true);  /* Records full path */
 }])
 
-    .controller('AppController', function ($scope) {
+    .controller('AppController', ['$scope', '$smoothScroll', function ($scope, $smoothScroll) {
         var date = new Date();
         $scope.year = date.getFullYear();
 
+        $scope.scrollTo = function(id) {
+            $smoothScroll.slow("#" + id);
+        };
+
 
         //leverages animate.css classes
+        $scope.animateTada = function($el) {
+            $el.addClass('animated tada');
+        };
 
         //ANIMATE IN
 
@@ -109,4 +102,4 @@ app.config(['$routeProvider', '$locationProvider', '$analyticsProvider', functio
             $el.addClass('hidden');
             $el.removeClass('animated zoomOut');
         };
-    });
+    }]);
