@@ -52,25 +52,30 @@ var app = angular.module('app')
 
         $scope.projects = [
             {
-                'name': "Hiking Trails Mobile App",
-                'description': "Mobile optimized (hybrid) application that displays hiking trails around Vancouver, Canada" +
-                "(Tools: AngularJS, Ionic Framework, SQLite)",
-                'url': "",
-                'image': ''
+                'name': "Hiking Vancouver",
+                'description': "Mobile (hybrid) application that displays hiking trails around Vancouver, Canada",
+                'href': "http://hike.vincentwong.me",
+                'img': 'public/img/projects/HikingVancouver.jpg'
             },
             {
                 'name': "Fruit Finder",
-                'description': "A web application that utilizes a public data set provided by the City of Vancouver to display the locations of community gardens and fruit trees in map and tabular form." +
-                "(Tools: Express(Node.js), MongoDB)",
-                'url': "https://gory-coffin-2047.herokuapp.com/",
-                'image': ''
+                'description': "Display the locations of local community gardens and fruit trees in Vancouver.",
+                'href': "https://gory-coffin-2047.herokuapp.com/",
+                'img': 'public/img/projects/FruitFinder.jpg'
             },
-            {
+            /*{
+                'name': "TypeRacer",
+                'description': "Find out how fast you can type!",
+                'href': "https://pusheenracer.herokuapp.com/",
+                'img': ''
+            },*/
+            /*{
                 'name': "Music Store Shopping App",
                 'description': "Display an online product catalogue for a simulated music store and simulated purchases." +
                 "(Tools: PHP, AngularJS, MySQL)",
-                'url': "",
-                'image': ''
-            }
+                'href': "",
+                'img': ''
+            }*/
+
         ];
     }]);

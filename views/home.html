@@ -3,7 +3,7 @@
         <div id="banner-image">
             <div id="banner-overlay">
                 <div when-visible="animateInFadeInDown" class="hidden" id="banner-heading">
-                    <div id="banner-title">HI, I'M VINCENT</div>
+                    <div id="banner-title">Hello World</div>
                     <div id="banner-subtitle"></div>
                 </div>
             </div>
@@ -30,25 +30,25 @@
                         <div when-visible="animateInTada">
                             <a href="https://github.com/wongvincent" target="_blank" analytics-on="click"
                                analytics-event="GitHub" analytics-category="AboutMe">
-                                <img src="public/img/github_dark_64.png">
+                                <img src="public/img/logos/github_dark_64.png">
                             </a>
                         </div>
                         <div when-visible="animateInTada">
                             <a href="https://ca.linkedin.com/in/vincentw1" target="_blank" analytics-on="click"
                                analytics-event="LinkedIn" analytics-category="AboutMe">
-                                <img src="public/img/linkedin_dark_64.png">
+                                <img src="public/img/logos/linkedin_dark_64.png">
                             </a>
                         </div>
                         <div when-visible="animateInTada">
                             <a href="mailto:hello@vincentwong.me" target="_top" analytics-on="click" analytics-event="Email"
                                analytics-category="AboutMe">
-                                <img src="public/img/mail_dark_64.png">
+                                <img src="public/img/logos/mail_dark_64.png">
                             </a>
                         </div>
                         <div when-visible="animateInTada">
                             <a href="https://www.instagram.com/wong.vincent/" target="_blank" analytics-on="click"
                                analytics-event="Instagram" analytics-category="AboutMe">
-                                <img src="public/img/instagram_dark_64.png">
+                                <img src="public/img/logos/instagram_dark_64.png">
                             </a>
                         </div>
                     </div>
@@ -59,16 +59,27 @@
 
     <div id="projects" class="panels">
         <div class="heading">Projects</div>
+        <div class="images">
+            <a ng-href="{{::project.href}}" target="_blank" ng-repeat="project in projects">
+                <span class="text two-spans">
+                    <span class="title">
+                        {{::project.name}}
+                    </span>
+                    {{::project.description}}
+                </span>
+                <img ng-src="{{::project.img}}" when-visible="animateInZoomIn" class="hidden">
+            </a>
+        </div>
     </div>
 
     <div id="photos" class="panels">
         <div class="heading">Photos</div>
-        <div>
-            <a ng-href="{{pic.href}}" target="_blank" ng-repeat="pic in instagramPics">
-                <span class="text">
-                    {{pic.text}}
+        <div class="images">
+            <a ng-href="{{::pic.href}}" target="_blank" ng-repeat="pic in instagramPics">
+                <span class="text title">
+                    {{::pic.text}}
                 </span>
-                <img ng-src="{{pic.img}}" when-visible="animateInZoomIn" class="hidden">
+                <img ng-src="{{::pic.img}}" when-visible="animateInZoomIn" class="hidden">
             </a>
         </div>
     </div>

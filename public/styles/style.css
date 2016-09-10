@@ -158,38 +158,46 @@ a {
         text-align: center; }
         #home #banner #banner-image #banner-overlay #banner-heading #banner-title {
           padding: 0 20px;
-          font-weight: bold;
+          font-weight: 500;
           font-size: 90px;
           color: white; }
         @media (max-width: 459px) {
           #home #banner #banner-image #banner-overlay #banner-heading #banner-title {
             font-size: 65px; } }
-#home #photos {
+#home .images {
   text-align: center; }
-  #home #photos a {
+  #home .images a {
     margin: 10px;
     position: relative;
     display: inline-block; }
-    #home #photos a .text {
+    #home .images a .text {
       position: absolute;
       top: 0;
       color: white;
       background-color: rgba(0, 50, 100, 0.6);
-      width: 200px;
-      height: 200px;
-      line-height: 200px;
+      width: 250px;
+      height: 250px;
       text-align: center;
       z-index: 10;
       opacity: 0;
       -webkit-transition: all 0.5s ease;
       -moz-transition: all 0.5s ease;
       -o-transition: all 0.5s ease;
-      transition: all 0.5s ease; }
-    #home #photos a .text:hover {
+      transition: all 0.5s ease;
+      line-height: 250px; }
+    #home .images a .text.two-spans {
+      line-height: normal; }
+      #home .images a .text.two-spans .title {
+        margin-bottom: 10px;
+        padding-top: 50px; }
+    #home .images a .text.title, #home .images a .text .title {
+      font-weight: 500;
+      display: block; }
+    #home .images a .text:hover {
       opacity: 1; }
-    #home #photos a img {
-      height: 200px;
-      width: 200px;
+    #home .images a img {
+      height: 250px;
+      width: 250px;
       -webkit-backface-visibility: hidden;
       -webkit-transform: translate3d(0, 0, 0); }
 #home #about {
@@ -199,8 +207,7 @@ a {
     #home #about #wrapper img {
       text-align: center;
       display: inline-block;
-      max-height: 350px;
-      max-width: 100%; }
+      max-height: 350px; }
     #home #about #wrapper #text {
       text-align: left;
       vertical-align: top;
