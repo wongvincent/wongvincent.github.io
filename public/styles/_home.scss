@@ -30,7 +30,7 @@
     z-index: -99;
 
     #banner-image {
-      background: url('../img/burnaby.jpg') no-repeat center center;
+      background: url('../img/burnabyUnoptimized.jpg') no-repeat center center;
       height: $full-height;
       width: 100%;
       background-size: cover;
@@ -61,7 +61,6 @@
           #banner-subtitle {
 
           }
-
         }
       }
     }
@@ -161,6 +160,24 @@
           }
         }
       }
+    }
+  }
+  #down-arrow {
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+    color: white;
+    text-align: center;
+
+    a {
+      border: 2px solid;
+      border-radius: 1000px;
+      padding: 3px 11px;
+      font-size: 35px;
+      color: white;
+    }
+    a:hover {
+      background-color: $dark-blue;
     }
   }
 }

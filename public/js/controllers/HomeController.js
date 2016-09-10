@@ -4,28 +4,28 @@ var app = angular.module('app')
         $scope.instagramPics = [
             {
                 "href": "https://www.instagram.com/p/-zawaiKW5F/",
-                "img": "public/img/mylife/instagram5.jpg",
+                "img": "https://instagram.com/p/-zawaiKW5F/media/?size=m",
                 "text": "Capilano Canyon"
             },
             {
-                "href": "https://www.instagram.com/p/9ZqS6QKW6W/",
-                "img": "public/img/mylife/instagram3.jpg",
-                "text": "Platy and Cardinal Tetras"
+                "href": "https://www.instagram.com/p/BJoqzYxAXsu/",
+                "img": "https://instagram.com/p/BJoqzYxAXsu/media/?size=m",
+                "text": "Lower Joffre Lake"
             },
             {
                 "href": "https://www.instagram.com/p/-zaPxzqW4J/",
-                "img": "public/img/mylife/instagram4.jpg",
+                "img": "https://instagram.com/p/-zaPxzqW4J/media/?size=m",
                 "text": "Inukshuk - Mt. Seymour"
             },
             {
-                "href": "https://www.instagram.com/p/9KYsWyKW7d/",
-                "img": "public/img/mylife/instagram2.jpg",
-                "text": "Ochre sea star"
+                "href": "https://www.instagram.com/p/9ZqS6QKW6W/",
+                "img": "https://instagram.com/p/9ZqS6QKW6W/media/?size=m",
+                "text": "Platy and Cardinal Tetras"
             },
             {
-                "href": "https://www.instagram.com/p/1eEFdTKW1h/",
-                "img": "public/img/mylife/instagram1.jpg",
-                "text": "Coal Harbour"
+                "href": "https://www.instagram.com/p/BJoroljA1dH/",
+                "img": "https://instagram.com/p/BJoroljA1dH/media/?size=m",
+                "text": "Middle Joffre Lake"
             }
         ];
 

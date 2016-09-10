@@ -27,24 +27,24 @@
 </head>
 
 <body ng-app="app" ng-controller="AppController">
-<div class="wrapper">
+<div class="wrapper" id="top">
     <div class="container">
 
         <div id="nav-header">
-            <a href="" ng-click="scrollTo('home')" analytics-on="click" analytics-event="Navigate" analytics-category="Header"
-               analytics-label="Home">
+            <a href="" ng-click="scrollTo('top')" analytics-on="click" analytics-event="Navigate" analytics-category="Header"
+               analytics-label="Home" when-visible="animateInFadeIn" class="hidden">
                 HOME
             </a>
             <a href="" ng-click="scrollTo('about')" analytics-on="click" analytics-event="Navigate" analytics-category="Header"
-               analytics-label="About">
+               analytics-label="About" when-visible="animateInFadeIn" class="hidden">
                 ABOUT
             </a>
             <a href="" ng-click="scrollTo('projects')" analytics-on="click" analytics-event="Navigate" analytics-category="Header"
-               analytics-label="Projects">
+               analytics-label="Projects" when-visible="animateInFadeIn" class="hidden">
                 PROJECTS
             </a>
             <a href="" ng-click="scrollTo('photos')" analytics-on="click" analytics-event="Navigate" analytics-category="Header"
-               analytics-label="Photos">
+               analytics-label="Photos" when-visible="animateInFadeIn" class="hidden">
                 PHOTOS
             </a>
         </div>

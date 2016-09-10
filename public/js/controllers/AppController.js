@@ -34,9 +34,6 @@ app.config(['$routeProvider', '$locationProvider', '$analyticsProvider', functio
 
 
         //leverages animate.css classes
-        $scope.animateTada = function($el) {
-            $el.addClass('animated tada');
-        };
 
         //ANIMATE IN
 

@@ -27,25 +27,25 @@
                     <br><br>
                     Feel free to connect with me!
                     <div class="images">
-                        <div when-visible="animateTada">
+                        <div when-visible="animateInTada">
                             <a href="https://github.com/wongvincent" target="_blank" analytics-on="click"
                                analytics-event="GitHub" analytics-category="AboutMe">
                                 <img src="public/img/github_dark_64.png">
                             </a>
                         </div>
-                        <div when-visible="animateTada">
+                        <div when-visible="animateInTada">
                             <a href="https://ca.linkedin.com/in/vincentw1" target="_blank" analytics-on="click"
                                analytics-event="LinkedIn" analytics-category="AboutMe">
                                 <img src="public/img/linkedin_dark_64.png">
                             </a>
                         </div>
-                        <div when-visible="animateTada">
+                        <div when-visible="animateInTada">
                             <a href="mailto:hello@vincentwong.me" target="_top" analytics-on="click" analytics-event="Email"
                                analytics-category="AboutMe">
                                 <img src="public/img/mail_dark_64.png">
                             </a>
                         </div>
-                        <div when-visible="animateTada">
+                        <div when-visible="animateInTada">
                             <a href="https://www.instagram.com/wong.vincent/" target="_blank" analytics-on="click"
                                analytics-event="Instagram" analytics-category="AboutMe">
                                 <img src="public/img/instagram_dark_64.png">
@@ -71,6 +71,12 @@
                 <img ng-src="{{pic.img}}" when-visible="animateInZoomIn" class="hidden">
             </a>
         </div>
+    </div>
+
+    <div when-visible="animateInFadeIn" class="hidden" id="down-arrow">
+        <a href="" ng-click="scrollTo('about')">
+            &#9660;
+        </a>
     </div>
 
 </div>
