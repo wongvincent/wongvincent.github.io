@@ -1,6 +1,47 @@
 var app = angular.module('app')
 
     .controller('HomeController', ['$scope', function ($scope) {
+        $scope.projects = [
+            {
+                'name': "Hiking Vancouver",
+                'description': "Mobile (hybrid) Android application that displays hiking trails around Vancouver, Canada",
+                'href': "http://hike.vincentwong.me",
+                'img': "public/img/projects/HikingVancouver.jpg"
+            },
+            {
+                'name': "Tamaki Roulette",
+                'description': "Randomly pick an option from a list of choices.",
+                'href': "https://tamakiroulette.herokuapp.com/",
+                'img': "public/img/projects/TamakiRoulette.jpg"
+            },
+            {
+                'name': "Fruit Finder",
+                'description': "Display the locations of local community gardens and fruit trees in Vancouver.",
+                'href': "https://gory-coffin-2047.herokuapp.com/",
+                'img': "public/img/projects/FruitFinder.jpg"
+            },
+            {
+                'name': "Music Store",
+                'description': "Shop from a fake online music store.",
+                'href': "http://musicshop.azurewebsites.net/",
+                'img': "public/img/projects/MusicStore.jpg"
+            },
+            /*{
+             'name': "TypeRacer",
+             'description': "Find out how fast you can type!",
+             'href': "https://pusheenracer.herokuapp.com/",
+             'img': ''
+             },*/
+            /*{
+             'name': "Music Store Shopping App",
+             'description': "Display an online product catalogue for a simulated music store and simulated purchases." +
+             "(Tools: PHP, AngularJS, MySQL)",
+             'href': "",
+             'img': ''
+             }*/
+
+        ];
+
         $scope.instagramPics = [
             {
                 "href": "https://www.instagram.com/p/-zawaiKW5F/",
@@ -48,34 +89,5 @@ var app = angular.module('app')
                     "Implemented major user account and site management features to a site management application."
                 ]
             }
-        ];
-
-        $scope.projects = [
-            {
-                'name': "Hiking Vancouver",
-                'description': "Mobile (hybrid) application that displays hiking trails around Vancouver, Canada",
-                'href': "http://hike.vincentwong.me",
-                'img': 'public/img/projects/HikingVancouver.jpg'
-            },
-            {
-                'name': "Fruit Finder",
-                'description': "Display the locations of local community gardens and fruit trees in Vancouver.",
-                'href': "https://gory-coffin-2047.herokuapp.com/",
-                'img': 'public/img/projects/FruitFinder.jpg'
-            },
-            /*{
-                'name': "TypeRacer",
-                'description': "Find out how fast you can type!",
-                'href': "https://pusheenracer.herokuapp.com/",
-                'img': ''
-            },*/
-            /*{
-                'name': "Music Store Shopping App",
-                'description': "Display an online product catalogue for a simulated music store and simulated purchases." +
-                "(Tools: PHP, AngularJS, MySQL)",
-                'href': "",
-                'img': ''
-            }*/
-
         ];
     }]);
