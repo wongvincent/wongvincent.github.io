@@ -145,7 +145,7 @@ a {
   top: 0;
   z-index: -99; }
   #home #banner #banner-image {
-    background: url("../img/burnabyUnoptimized.jpg") no-repeat center center;
+    background: url("../img/burnaby.jpg") no-repeat center center;
     height: 100vh;
     width: 100%;
     background-size: cover; }
