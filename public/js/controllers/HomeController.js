@@ -4,9 +4,15 @@ var app = angular.module('app')
         $scope.projects = [
             {
                 'name': "Hiking Vancouver",
-                'description': "Mobile (hybrid) Android application that displays hiking trails around Vancouver, Canada",
+                'description': "Android app that displays info and photos of hiking trails around Vancouver.",
                 'href': "http://hike.vincentwong.me",
                 'img': "public/img/projects/HikingVancouver.jpg"
+            },
+            {
+                'name': "Currency Converter",
+                'description': "Convert between 32 different currencies. Exchange rates updated daily.",
+                'href': "http://currency.vincentwong.me",
+                'img': "public/img/projects/CurrencyConverter.jpg"
             },
             {
                 'name': "Tamaki Roulette",
@@ -25,21 +31,13 @@ var app = angular.module('app')
                 'description': "Shop from a fake online music store.",
                 'href': "http://musicshop.azurewebsites.net/",
                 'img': "public/img/projects/MusicStore.jpg"
-            },
+            }
             /*{
              'name': "TypeRacer",
              'description': "Find out how fast you can type!",
              'href': "https://pusheenracer.herokuapp.com/",
              'img': ''
              },*/
-            /*{
-             'name': "Music Store Shopping App",
-             'description': "Display an online product catalogue for a simulated music store and simulated purchases." +
-             "(Tools: PHP, AngularJS, MySQL)",
-             'href': "",
-             'img': ''
-             }*/
-
         ];
 
         $scope.instagramPics = [
