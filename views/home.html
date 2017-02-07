@@ -26,19 +26,19 @@
                     Feel free to connect with me!
                     <div class="images">
                         <div when-visible="animateInTada">
-                            <a href="https://github.com/wongvincent" target="_blank" analytics-on="click"
+                            <a href="https://github.com/wongvincent" target="_blank" analytics-on
                                analytics-event="GitHub" analytics-category="AboutMe">
                                 <img src="public/img/logos/github_dark_64.png">
                             </a>
                         </div>
                         <div when-visible="animateInTada">
-                            <a href="https://ca.linkedin.com/in/vincentw1" target="_blank" analytics-on="click"
+                            <a href="https://ca.linkedin.com/in/vincentw1" target="_blank" analytics-on
                                analytics-event="LinkedIn" analytics-category="AboutMe">
                                 <img src="public/img/logos/linkedin_dark_64.png">
                             </a>
                         </div>
                         <div when-visible="animateInTada">
-                            <a href="mailto:hello@vincentwong.me" target="_top" analytics-on="click" analytics-event="Email"
+                            <a href="mailto:hello@vincentwong.me" target="_top" analytics-on analytics-event="Email"
                                analytics-category="AboutMe">
                                 <img src="public/img/logos/mail_dark_64.png">
                             </a>
@@ -58,7 +58,7 @@
     <div id="projects" class="panels">
         <div class="heading">Projects</div>
         <div class="images">
-            <a ng-href="{{::project.href}}" target="_blank" ng-repeat="project in projects">
+            <a ng-href="{{::project.href}}" target="_blank" ng-repeat="project in projects" analytics-on analytics-event="{{::project.name}}" analytics-category="Projects">
                 <span class="text two-spans">
                     <span class="title">
                         {{::project.name}}

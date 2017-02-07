@@ -1,6 +1,6 @@
 var app = angular.module('app', ['ngRoute', 'angular-scroll-animate', 'angulartics', 'angulartics.google.analytics', 'smooth-scroll']);
 
-app.config(['$routeProvider', '$locationProvider', '$analyticsProvider', function ($routeProvider, $locationProvider, $analyticsProvider) {
+app.config(['$routeProvider', '$analyticsProvider', function ($routeProvider, $analyticsProvider) {
 
     //$locationProvider.html5Mode(true).hashPrefix('!')
 
@@ -19,6 +19,9 @@ app.config(['$routeProvider', '$locationProvider', '$analyticsProvider', functio
         .otherwise({
             templateUrl: 'views/404.html'
         });
+
+    $analyticsProvider.firstPageview(true); /* Records pages that don't use $state or $route */
+    $analyticsProvider.withAutoBase(true);  /* Records full path */
 }])
 
     .controller('AppController', ['$scope', '$smoothScroll', function ($scope, $smoothScroll) {
