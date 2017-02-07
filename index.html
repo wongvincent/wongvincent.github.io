@@ -24,6 +24,44 @@
 
     <!-- styles lib -->
     <link rel="stylesheet" href="public/styles/animate.css">
+
+    <!-- libs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+    <script src="public/js/libs/angular-animate.min.js"></script>
+    <script src="public/js/libs/angular-cookies.min.js"></script>
+    <script src="public/js/libs/angular-route.min.js"></script>
+    <script src="public/js/libs/angular-scroll-animate.js"></script>
+
+    <!-- plugins -->
+
+    <!-- Angular analytics -->
+    <script src="public/js/plugins/angulartics.min.js"></script>
+    <script src="public/js/plugins/angulartics-ga.min.js"></script>
+
+    <!-- Smooth scroll -->
+    <script src="public/js/plugins/angular-smooth-scroll.js"></script>
+
+    <!-- typed.js jQuery plugin -->
+    <script src="public/js/plugins/typed.js-master/js/typed.js"></script>
+
+    <!-- controllers -->
+    <script src="public/js/controllers/AppController.js"></script>
+    <script src="public/js/controllers/HomeController.js"></script>
+
+    <!-- directives -->
+    <script src="public/js/directives/TypedDirective.js"></script>
+
+    <!-- Google analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-70991808-1', 'auto');
+
+</script>
 </head>
 
 <body ng-app="app" ng-controller="AppController">
@@ -31,19 +69,19 @@
     <div class="container">
 
         <div id="nav-header">
-            <a href="" ng-click="scrollTo('top')" analytics-on="click" analytics-event="Navigate" analytics-category="Header"
+            <a href="" ng-click="scrollTo('top')" analytics-on analytics-event="Navigate" analytics-category="Header"
                analytics-label="Home" when-visible="animateInFadeIn" class="hidden">
                 HOME
             </a>
-            <a href="" ng-click="scrollTo('about')" analytics-on="click" analytics-event="Navigate" analytics-category="Header"
+            <a href="" ng-click="scrollTo('about')" analytics-on analytics-event="Navigate" analytics-category="Header"
                analytics-label="About" when-visible="animateInFadeIn" class="hidden">
                 ABOUT
             </a>
-            <a href="" ng-click="scrollTo('projects')" analytics-on="click" analytics-event="Navigate" analytics-category="Header"
+            <a href="" ng-click="scrollTo('projects')" analytics-on analytics-event="Navigate" analytics-category="Header"
                analytics-label="Projects" when-visible="animateInFadeIn" class="hidden">
                 PROJECTS
             </a>
-            <!--<a href="" ng-click="scrollTo('photos')" analytics-on="click" analytics-event="Navigate" analytics-category="Header"
+            <!--<a href="" ng-click="scrollTo('photos')" analytics-on analytics-event="Navigate" analytics-category="Header"
                analytics-label="Photos" when-visible="animateInFadeIn" class="hidden">
                 PHOTOS
             </a>-->
@@ -55,25 +93,25 @@
         <div class="footer grey">
             <div class="images">
                 <div>
-                    <a href="https://github.com/wongvincent" target="_blank" analytics-on="click"
+                    <a href="https://github.com/wongvincent" target="_blank" analytics-on
                        analytics-event="GitHub" analytics-category="Footer">
                         <img src="public/img/logos/github_light_64.png">
                     </a>
                 </div>
                 <div>
-                    <a href="https://ca.linkedin.com/in/vincentw1" target="_blank" analytics-on="click"
+                    <a href="https://ca.linkedin.com/in/vincentw1" target="_blank" analytics-on
                        analytics-event="LinkedIn" analytics-category="Footer">
                         <img src="public/img/logos/linkedin_light_64.png">
                     </a>
                 </div>
                 <div>
-                    <a href="mailto:hello@vincentwong.me" target="_top" analytics-on="click" analytics-event="Email"
+                    <a href="mailto:hello@vincentwong.me" target="_top" analytics-on analytics-event="Email"
                        analytics-category="Footer">
                         <img src="public/img/logos/mail_light_64.png">
                     </a>
                 </div>
                 <!--<div>
-                    <a href="https://www.instagram.com/wong.vincent/" target="_blank" analytics-on="click"
+                    <a href="https://www.instagram.com/wong.vincent/" target="_blank" analytics-on
                        analytics-event="Instagram" analytics-category="Footer">
                         <img src="public/img/logos/instagram_light_64.png">
                     </a>
@@ -86,50 +124,6 @@
     </div>
 </div>
 
-<!-- libs -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
-<script src="public/js/libs/angular-animate.min.js"></script>
-<script src="public/js/libs/angular-cookies.min.js"></script>
-<script src="public/js/libs/angular-route.min.js"></script>
-<script src="public/js/libs/angular-scroll-animate.js"></script>
-
-<!-- plugins -->
-
-<!-- Angular analytics -->
-<script src="public/js/plugins/angulartics.min.js"></script>
-<script src="public/js/plugins/angulartics-ga.min.js"></script>
-
-<!-- Smooth scroll -->
-<script src="public/js/plugins/angular-smooth-scroll.js"></script>
-
-<!-- typed.js jQuery plugin -->
-<script src="public/js/plugins/typed.js-master/js/typed.js"></script>
-
-<!-- controllers -->
-<script src="public/js/controllers/AppController.js"></script>
-<script src="public/js/controllers/HomeController.js"></script>
-
-<!-- directives -->
-<script src="public/js/directives/TypedDirective.js"></script>
-
-<!-- Google analytics -->
-<script>
-    if (document.location.hostname.search("vincentwong.me") !== -1) {
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                        (i[r].q = i[r].q || []).push(arguments)
-                    }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                    m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-70991808-1', 'none');
-    }
-</script>
 </body>
 </html>
 
