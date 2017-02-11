@@ -6,38 +6,32 @@ var app = angular.module('app')
                 'name': "Hiking Vancouver",
                 'description': "Android app that displays info and photos of hiking trails around Vancouver.",
                 'href': "http://hike.vincentwong.me",
-                'img': "public/img/projects/HikingVancouver.jpg"
+                'img': "public/img/projects/HikingVancouverMIN.jpg"
             },
             {
                 'name': "Currency Converter",
                 'description': "Convert between 32 different currencies. Exchange rates updated daily.",
                 'href': "http://currency.vincentwong.me",
-                'img': "public/img/projects/CurrencyConverter.jpg"
+                'img': "public/img/projects/CurrencyConverterMIN.jpg"
             },
             {
                 'name': "Tamaki Roulette",
                 'description': "Randomly pick an option from a list of choices.",
                 'href': "https://tamakiroulette.herokuapp.com/",
-                'img': "public/img/projects/TamakiRoulette.jpg"
+                'img': "public/img/projects/TamakiRouletteMIN.jpg"
             },
             {
                 'name': "Fruit Finder",
                 'description': "Display the locations of local community gardens and fruit trees in Vancouver.",
                 'href': "https://gory-coffin-2047.herokuapp.com/",
-                'img': "public/img/projects/FruitFinder.jpg"
+                'img': "public/img/projects/FruitFinderMIN.jpg"
             },
             {
                 'name': "Music Store",
                 'description': "Shop from a fake online music store.",
                 'href': "http://musicshop.azurewebsites.net/",
-                'img': "public/img/projects/MusicStore.jpg"
+                'img': "public/img/projects/MusicStoreMIN.jpg"
             }
-            /*{
-             'name': "TypeRacer",
-             'description': "Find out how fast you can type!",
-             'href': "https://pusheenracer.herokuapp.com/",
-             'img': ''
-             },*/
         ];
 
         $scope.instagramPics = [
