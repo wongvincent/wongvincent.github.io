@@ -80,6 +80,9 @@
     line-height: 2.5;
     margin: 2px;
     padding: 12px 7px;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-duration: 3s;
+    -moz-animation-duration: 3s;
   }
 
   a:hover{
@@ -96,23 +99,23 @@
     color: #bbbbbb;
     font-weight:bold;
   }
-  a:hover{
-    color: #eeeeee;
-  }
   div.images {
     height: 40px;
     div {
       display: inline-block;
-      width: calc(#{$footer-image-size} + #{$image-size-increase-on-hover} * 2);
+      width: $footer-image-size;
       text-align: center;
+      margin: 0 8px;
       img {
         width: $footer-image-size;
         height: $footer-image-size;
         vertical-align: middle;
       }
+      #github-footer-logo {
+        border-radius: 15px;
+      }
       img:hover {
-        width: calc(#{$footer-image-size} + #{$image-size-increase-on-hover});
-        height: calc(#{$footer-image-size} + #{$image-size-increase-on-hover});
+        background: $royal-blue;
       }
     }
   }

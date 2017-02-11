@@ -30,7 +30,6 @@
     z-index: -99;
 
     #banner-image {
-      background: url('../img/burnaby.jpg') no-repeat center center;
       height: $full-height;
       width: 100%;
       background-size: cover;
@@ -40,6 +39,11 @@
         width: 100%;
         height: $full-height;
 
+        div.animated {
+          -webkit-animation-duration: 1s;
+          -webkit-animation-duration: 1s;
+          -moz-animation-duration: 1s;
+        }
         #banner-heading {
           padding-top: calc(#{$full-height} / 2 - 100px);
           position: relative;
@@ -50,6 +54,7 @@
             font-weight: 500;
             font-size: 90px;
             color: white;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
           }
 
           @media (max-width: 459px) { //nexus 4-6, iphone 4, 5, 6, 6+
@@ -150,23 +155,24 @@
             font-weight: bold;
             color: $blue;
           }
-          a:hover {
-            color: #999999;
-          }
           div.images {
             margin-top: 10px;
             div {
               display: inline-block;
-              width: calc(#{$about-me-image-size} + #{$image-size-increase-on-hover} * 2);
+              width: $about-me-image-size;
               text-align: center;
+              margin: 12px;
               img {
                 width: $about-me-image-size;
                 height: $about-me-image-size;
                 vertical-align: top;
+                border-radius: 5px;
+              }
+              #github-aboutme-logo {
+                border-radius: 25px;
               }
               img:hover {
-                width: calc(#{$about-me-image-size} + #{$image-size-increase-on-hover});
-                height: calc(#{$about-me-image-size} + #{$image-size-increase-on-hover});
+                background-color: $royal-blue;
               }
             }
           }

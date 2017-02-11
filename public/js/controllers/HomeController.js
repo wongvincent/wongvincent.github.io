@@ -1,6 +1,9 @@
 var app = angular.module('app')
 
     .controller('HomeController', ['$scope', function ($scope) {
+        var background_images = ['burnaby.jpg', 'chief.jpg', 'garibaldi.jpg', 'capilano.jpg'];
+        $('#banner-image').css({'background': 'url(public/img/' + background_images[Math.floor(Math.random() * background_images.length)] + ') no-repeat center center'});
+
         $scope.projects = [
             {
                 'name': "Hiking Vancouver",
