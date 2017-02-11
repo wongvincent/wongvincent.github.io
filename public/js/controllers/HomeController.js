@@ -2,7 +2,18 @@ var app = angular.module('app')
 
     .controller('HomeController', ['$scope', function ($scope) {
         var background_images = ['burnaby.jpg', 'chief.jpg', 'garibaldi.jpg', 'capilano.jpg'];
-        $('#banner-image').css({'background': 'url(public/img/' + background_images[Math.floor(Math.random() * background_images.length)] + ') no-repeat center center'});
+        var img = new Image();
+        $('.container').css('overflow', 'hidden');
+        img.onload = function () {
+            $('#banner-image').css({'background': 'url(' + img.src + ') no-repeat center center'});
+            $('#loading').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',
+                function () {
+                    $('#loading').css("display", "none");
+                });
+            $('#loading').animateCss('fadeOut');
+            $('.container').css('overflow', 'visible');
+        };
+        img.src = 'public/img/' + background_images[Math.floor(Math.random() * background_images.length)];
 
         $scope.projects = [
             {
@@ -62,27 +73,6 @@ var app = angular.module('app')
                 "href": "https://www.instagram.com/p/BJoroljA1dH/",
                 "img": "https://instagram.com/p/BJoroljA1dH/media/?size=m",
                 "text": "Middle Joffre Lake"
-            }
-        ];
-
-        $scope.workExperience = [
-            {
-                "position" : "Software Developer Intern",
-                "company" : "SAP Canada Inc.",
-                "location" : "Vancouver, BC",
-                "date" : "January 2016 - Present",
-                "details" : []
-            },
-            {
-                "position" : "Software Developer Co-op",
-                "company" : "Ingenium Technologies Corp.",
-                "location" : "Vancouver, BC",
-                "date" : "January 2015 - August 2015",
-                "details" : [
-                    "Maintained and contributed to developing features for an enterprise web application by utilizing the AngularJS framework for front-end development and C# (ASP.NET MVC framework) for back-end development.",
-                    "Worked extensively on a hybrid mobile web application built on Ionic Framework.",
-                    "Implemented major user account and site management features to a site management application."
-                ]
             }
         ];
     }]);

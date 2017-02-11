@@ -35,6 +35,16 @@ app.config(['$routeProvider', '$analyticsProvider', function ($routeProvider, $a
 
         //leverages animate.css classes
 
+        //jQuery function that executes animation. Use like $('#element').animateCss('bounce');
+        $.fn.extend({
+            animateCss: function (animationName) {
+                var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+                this.addClass('animated ' + animationName).one(animationEnd, function() {
+                    $(this).removeClass('animated ' + animationName);
+                });
+            }
+        });
+
         //ANIMATE IN
         $scope.animateInFadeIn = function($el) {
             $el.removeClass('hidden');
@@ -46,10 +56,6 @@ app.config(['$routeProvider', '$analyticsProvider', function ($routeProvider, $a
             $el.addClass('animated fadeInDown');
         };
 
-        $scope.animateInTada = function($el) {
-            $el.removeClass('hidden');
-            $el.addClass('animated tada');
-        };
         $scope.animateInZoomIn = function($el) {
             $el.removeClass('hidden');
             $el.addClass('animated zoomIn');
