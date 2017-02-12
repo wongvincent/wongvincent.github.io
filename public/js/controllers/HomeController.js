@@ -1,19 +1,32 @@
 var app = angular.module('app')
 
     .controller('HomeController', ['$scope', function ($scope) {
-        var background_images = ['burnaby.jpg', 'chief.jpg', 'garibaldi.jpg', 'capilano.jpg'];
-        var img = new Image();
-        $('.container').css('overflow', 'hidden');
-        img.onload = function () {
-            $('#banner-image').css({'background': 'url(' + img.src + ') no-repeat center center'});
-            $('#loading').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',
-                function () {
-                    $('#loading').css("display", "none");
-                });
-            $('#loading').animateCss('fadeOut');
-            $('.container').css('overflow', 'visible');
+        var loadBannerImage = function () {
+            var initialTime = new Date().getTime();
+            var background_images = ['burnaby.jpg', 'chief.jpg', 'garibaldi.jpg', 'capilano.jpg'];
+            var img = new Image();
+
+            $('.container').css('overflow', 'hidden');
+            $('#down-arrow').css('visibility', 'hidden');
+
+            img.onload = function () {
+                var actualLoadtime = new Date().getTime() - initialTime;
+                var desiredLoadtime = 1500;
+                var waitAdditional = (actualLoadtime < desiredLoadtime) ? desiredLoadtime - actualLoadtime : 0;
+                setTimeout(function () {
+                    $('#banner-image').css({'background': 'url(' + img.src + ') no-repeat center center'});
+                    $('#loading').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                        $('#loading').css("display", "none");
+                    });
+                    $('.container').css('overflow', 'visible');
+                    $('#down-arrow').css('visibility', 'visible');
+                    $('#loading').animateCss('fadeOut');
+                }, waitAdditional);
+            };
+            img.src = 'public/img/' + background_images[Math.floor(Math.random() * background_images.length)];
         };
-        img.src = 'public/img/' + background_images[Math.floor(Math.random() * background_images.length)];
+
+        loadBannerImage();
 
         $scope.projects = [
             {

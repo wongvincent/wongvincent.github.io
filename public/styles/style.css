@@ -44,13 +44,13 @@ a {
     .wrapper .container #loading {
       background: #FFF;
       height: 100vh;
-      width: 99vw;
+      width: calc(100vw - 17px);
       overflow: hidden; }
       .wrapper .container #loading .spinner {
         border: 20px solid #f3f3f3;
         -webkit-animation: spin 2s linear infinite;
         animation: spin 2s linear infinite;
-        border-top: 20px solid #27598C;
+        border-top: 20px solid #333333;
         border-radius: 50%;
         width: 175px;
         height: 175px;
@@ -67,6 +67,13 @@ a {
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
+      .wrapper .container #loading #site-logo {
+        text-align: center;
+        margin-top: -197px; }
+        .wrapper .container #loading #site-logo img {
+          height: 180px;
+          width: 180px; }
+
 .middle-of-page {
   top: 51px;
   left: 0px;
