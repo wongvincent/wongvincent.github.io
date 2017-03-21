@@ -1,162 +1,175 @@
 .nav-header-div {
-  height: $nav-header-height;
+	height: $nav-header-height;
 }
 
 .wrapper {
-  min-height: calc(100% - #{$footer-total-top-bot-padding});
-  height: auto !important;
-  margin: 0 auto;
-  margin-bottom: -$footer-height; /* the bottom margin is the negative value of the footer's height */
+	min-height: calc(100% - #{$footer-total-top-bot-padding});
+	height: auto !important;
+	margin: 0 auto;
+	margin-bottom: -$footer-height; /* the bottom margin is the negative value of the footer's height */
 
-  .container {
-    position: absolute;
-    height: 100%;
-    width: 100%;
+	.container {
+		position: absolute;
+		height: 100%;
+		width: 100%;
 
-    #loading {
-      background: #FFF;
-      height: 100vh;
-      width: calc(100vw - 17px);
-      overflow: hidden;
-      .spinner {
-        border: 20px solid #f3f3f3;
-        -webkit-animation: spin 2s linear infinite;
-        animation: spin 2s linear infinite;
-        border-top: 20px solid #333333;
-        border-radius: 50%;
-        width: 175px;
-        height: 175px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: calc(100vh / 2 - 110px);
+		#loading {
+			background: #FFF;
+			height: 100vh;
+			width: calc(100vw - 17px);
+			overflow: hidden;
+			.spinner {
+				border: 20px solid #f3f3f3;
+				-webkit-animation: spin 2s linear infinite;
+				animation: spin 2s linear infinite;
+				border-top: 20px solid #333333;
+				border-radius: 50%;
+				width: 175px;
+				height: 175px;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: calc(100vh / 2 - 110px);
 
-        @-webkit-keyframes spin {
-          0% { -webkit-transform: rotate(0deg); }
-          100% { -webkit-transform: rotate(360deg); }
-        }
+				@-webkit-keyframes spin {
+					0% {
+						-webkit-transform: rotate(0deg);
+					}
+					100% {
+						-webkit-transform: rotate(360deg);
+					}
+				}
 
-        @keyframes spin {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
-        }
-      }
-      #site-logo {
-        text-align: center;
-        margin-top: -197px;
-        img {
-          height: 180px;
-          width: 180px;
-        }
-      }
-    }
-  }
+				@keyframes spin {
+					0% {
+						transform: rotate(0deg);
+					}
+					100% {
+						transform: rotate(360deg);
+					}
+				}
+			}
+			#site-logo {
+				text-align: center;
+				margin-top: -197px;
+				img {
+					height: 180px;
+					width: 180px;
+				}
+			}
+		}
+	}
 }
 
 .middle-of-page {
-  top: $nav-header-height;
-  left: 0px;
-  width: 100%;
-  height: calc(#{$view-height});
-  text-align: center;
+	top: $nav-header-height;
+	left: 0px;
+	width: 100%;
+	height: calc(#{$view-height});
+	text-align: center;
 
-  div {
-    position: relative;
-    top: calc(50vh - #{$footer-height} - #{$nav-header-height});
-  }
+	div {
+		position: relative;
+		top: calc(50vh - #{$footer-height} - #{$nav-header-height});
+	}
 }
 
 #projects, #resume, #contact {
-  background: #387fc8;
-  width: 100%;
-  min-height: calc(#{$view-height});
-  text-align: center;
+	background: #387fc8;
+	width: 100%;
+	min-height: calc(#{$view-height});
+	text-align: center;
 
-  #top {
-    height: $not-home-top;
+	#top {
+		height: $not-home-top;
 
-    #text {
-      font-weight: bold;
-      font-size: 4.5em;
-      padding: 40px 8px 30px;
-    }
-  }
+		#text {
+			font-weight: bold;
+			font-size: 4.5em;
+			padding: 40px 8px 30px;
+		}
+	}
 
-  #body {
-    color: #333333;
-    max-width: 100vw;
-    min-height: calc(#{$not-home-body});
-    height: auto;
-    background: #eeeeee;
+	#body {
+		color: #333333;
+		max-width: 100vw;
+		min-height: calc(#{$not-home-body});
+		height: auto;
+		background: #eeeeee;
 
-    #body2 {
-      max-width: calc(100vw - #{$body2-leftright-padding} * 2);
-      width: 1000px;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: left;
-      padding: 30px $body2-leftright-padding 60px $body2-leftright-padding;
-    }
-  }
+		#body2 {
+			max-width: calc(100vw - #{$body2-leftright-padding} * 2);
+			width: 1000px;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: left;
+			padding: 30px $body2-leftright-padding 60px $body2-leftright-padding;
+		}
+	}
 }
 
 #nav-header {
-  text-align: center;
-  z-index: 1000;
-  height: $nav-header-height;
-  position: fixed;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  box-shadow: 0 5px 18px #222222;
+	text-align: center;
+	z-index: 1000;
+	height: $nav-header-height;
+	position: fixed;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	box-shadow: 0 5px 18px #222222;
 
-  a {
-    color: #cccccc;
-    font-size: 1.3em;
-    line-height: 2.5;
-    margin: 2px;
-    padding: 12px 7px;
-    -webkit-animation-duration: 3s;
-    -webkit-animation-duration: 3s;
-    -moz-animation-duration: 3s;
-  }
+	a {
+		color: #cccccc;
+		font-size: 1.3em;
+		line-height: 2.5;
+		margin: 2px;
+		padding: 12px 7px;
+		-webkit-animation-duration: 3s;
+		-moz-animation-duration: 3s;
+		-o-animation-duration: 3s;
+		animation-duration: 3s;
+		-webkit-animation-delay: 1s;
+		-moz-animation-delay: 1s;
+		-o-animation-delay: 1s;
+		animation-delay: 1s;
+	}
 
-  a:hover {
-    color: #ffffff;
-  }
+	a:hover {
+		color: #ffffff;
+	}
 }
 
 .footer {
-  a {
-    display: inline-block;
-    margin: 0px 2px 10px;
-    padding: 0 3px 10px;
-    color: #bbbbbb;
-    font-weight: bold;
-  }
-  div.images {
-    height: 40px;
-    div {
-      display: inline-block;
-      width: $footer-image-size;
-      text-align: center;
-      margin: 0 8px;
-      img {
-        width: $footer-image-size;
-        height: $footer-image-size;
-        vertical-align: middle;
-      }
-      #github-footer-logo {
-        border-radius: 15px;
-      }
-      img:hover {
-        background: $royal-blue;
-      }
-    }
-  }
+	a {
+		display: inline-block;
+		margin: 0px 2px 10px;
+		padding: 0 3px 10px;
+		color: #bbbbbb;
+		font-weight: bold;
+	}
+	div.images {
+		height: 40px;
+		div {
+			display: inline-block;
+			width: $footer-image-size;
+			text-align: center;
+			margin: 0 8px;
+			img {
+				width: $footer-image-size;
+				height: $footer-image-size;
+				vertical-align: middle;
+			}
+			#github-footer-logo {
+				border-radius: 15px;
+			}
+			img:hover {
+				background: #777;
+			}
+		}
+	}
 
-  background: #2b2b2b;
-  width: 100%;
-  padding: $footer-padding 0;
-  font-size: 0.9em;
-  text-align: center;
-  height: $footer-height;
+	background: #2b2b2b;
+	width: 100%;
+	padding: $footer-padding 0;
+	font-size: 0.9em;
+	text-align: center;
+	height: $footer-height;
 }

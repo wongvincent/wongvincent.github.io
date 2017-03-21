@@ -124,8 +124,13 @@ a {
     margin: 2px;
     padding: 12px 7px;
     -webkit-animation-duration: 3s;
-    -webkit-animation-duration: 3s;
-    -moz-animation-duration: 3s; }
+    -moz-animation-duration: 3s;
+    -o-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s; }
   #nav-header a:hover {
     color: #ffffff; }
 
@@ -156,7 +161,7 @@ a {
       .footer div.images div #github-footer-logo {
         border-radius: 15px; }
       .footer div.images div img:hover {
-        background: #0076CB; }
+        background: #777; }
 
 #home .panels {
   position: relative;
@@ -203,42 +208,6 @@ a {
         @media (max-width: 459px) {
           #home #banner #banner-image #banner-overlay #banner-heading #banner-title {
             font-size: 65px; } }
-#home .images {
-  text-align: center; }
-  #home .images a {
-    margin: 10px;
-    position: relative;
-    display: inline-block; }
-    #home .images a .text {
-      position: absolute;
-      top: 0;
-      color: white;
-      background-color: rgba(0, 50, 100, 0.6);
-      width: 250px;
-      height: 250px;
-      text-align: center;
-      z-index: 10;
-      opacity: 0;
-      -webkit-transition: all 0.5s ease;
-      -moz-transition: all 0.5s ease;
-      -o-transition: all 0.5s ease;
-      transition: all 0.5s ease;
-      line-height: 250px; }
-    #home .images a .text.two-spans {
-      line-height: normal; }
-      #home .images a .text.two-spans .title {
-        margin-bottom: 10px;
-        padding-top: 50px; }
-    #home .images a .text.title, #home .images a .text .title {
-      font-weight: 500;
-      display: block; }
-    #home .images a .text:hover {
-      opacity: 1; }
-    #home .images a img {
-      height: 250px;
-      width: 250px;
-      -webkit-backface-visibility: hidden;
-      -webkit-transform: translate3d(0, 0, 0); }
 #home #about {
   padding-bottom: 0; }
   #home #about #wrapper {
@@ -254,7 +223,7 @@ a {
       max-width: 500px;
       width: auto;
       padding: 25px;
-      font-size: 1.2em; }
+      font-size: 1.3em; }
       #home #about #wrapper #text #heading {
         color: #003264;
         font-weight: bold;
@@ -281,6 +250,44 @@ a {
             border-radius: 25px; }
           #home #about #wrapper #text #body div.images div img:hover {
             background-color: #FFF; }
+#home #projects .images {
+  text-align: center; }
+  #home #projects .images a {
+    margin: 10px;
+    position: relative;
+    display: inline-block; }
+    #home #projects .images a .text {
+      position: absolute;
+      top: 0;
+      color: white;
+      background-color: rgba(0, 50, 100, 0.8);
+      width: 300px;
+      height: 300px;
+      text-align: center;
+      z-index: 10;
+      opacity: 0;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+      line-height: 300px; }
+    #home #projects .images a .text.two-spans {
+      line-height: normal; }
+      #home #projects .images a .text.two-spans .title {
+        margin-bottom: 10px;
+        padding-top: 40px; }
+      #home #projects .images a .text.two-spans div:nth-child(2) {
+        margin: 14px;
+        font-size: 1.2em; }
+    #home #projects .images a .text.title, #home #projects .images a .text .title {
+      font-weight: 500;
+      display: block;
+      font-size: 1.7em; }
+    #home #projects .images a .text:hover {
+      opacity: 1; }
+    #home #projects .images a img {
+      height: 300px;
+      width: 300px; }
 #home #down-arrow {
   position: absolute;
   bottom: 25px;

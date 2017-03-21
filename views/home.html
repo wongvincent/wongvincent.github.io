@@ -57,12 +57,14 @@
         <div class="heading">Projects</div>
         <div class="images">
             <a ng-href="{{::project.href}}" target="_blank" ng-repeat="project in projects" analytics-on analytics-event="{{::project.name}}" analytics-category="Projects">
-                <span class="text two-spans">
-                    <span class="title">
+                <div class="text two-spans">
+                    <div class="title">
                         {{::project.name}}
-                    </span>
-                    {{::project.description}}
-                </span>
+                    </div>
+                    <div>
+                        {{::project.description}}
+                    </div>
+                </div>
                 <img ng-src="{{::project.img}}" when-visible="animateInZoomIn" class="hidden">
             </a>
         </div>
