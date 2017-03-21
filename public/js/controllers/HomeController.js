@@ -11,7 +11,7 @@ var app = angular.module('app')
 
             img.onload = function () {
                 var actualLoadtime = new Date().getTime() - initialTime;
-                var desiredLoadtime = 1500;
+                var desiredLoadtime = 800;
                 var waitAdditional = (actualLoadtime < desiredLoadtime) ? desiredLoadtime - actualLoadtime : 0;
                 setTimeout(function () {
                     $('#banner-image').css({'background': 'url(' + img.src + ') no-repeat center center'});
@@ -61,31 +61,12 @@ var app = angular.module('app')
             }
         ];
 
+		/*
         $scope.instagramPics = [
             {
                 "href": "https://www.instagram.com/p/-zawaiKW5F/",
                 "img": "https://instagram.com/p/-zawaiKW5F/media/?size=m",
                 "text": "Capilano Canyon"
-            },
-            {
-                "href": "https://www.instagram.com/p/BJoqzYxAXsu/",
-                "img": "https://instagram.com/p/BJoqzYxAXsu/media/?size=m",
-                "text": "Lower Joffre Lake"
-            },
-            {
-                "href": "https://www.instagram.com/p/-zaPxzqW4J/",
-                "img": "https://instagram.com/p/-zaPxzqW4J/media/?size=m",
-                "text": "Inukshuk - Mt. Seymour"
-            },
-            {
-                "href": "https://www.instagram.com/p/9ZqS6QKW6W/",
-                "img": "https://instagram.com/p/9ZqS6QKW6W/media/?size=m",
-                "text": "Platy and Cardinal Tetras"
-            },
-            {
-                "href": "https://www.instagram.com/p/BJoroljA1dH/",
-                "img": "https://instagram.com/p/BJoroljA1dH/media/?size=m",
-                "text": "Middle Joffre Lake"
             }
-        ];
+         */
     }]);

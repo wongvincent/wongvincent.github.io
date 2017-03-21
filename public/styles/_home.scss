@@ -156,7 +156,7 @@
             color: $blue;
           }
           div.images {
-            margin-top: 10px;
+            margin-top: 20px;
             div {
               display: inline-block;
               width: $about-me-image-size;
@@ -172,7 +172,7 @@
                 border-radius: 25px;
               }
               img:hover {
-                background-color: $royal-blue;
+                background-color: #FFF;
               }
             }
           }
