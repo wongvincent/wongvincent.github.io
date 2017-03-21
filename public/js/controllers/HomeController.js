@@ -60,11 +60,11 @@ var app = angular.module('app')
 					'img': "public/img/projects/FruitFinder.jpg"
 				},
 				/*{
-					'name': "Music Store",
-					'description': "Shop from a fake online music store.",
-					'href': "http://musicshop.azurewebsites.net/",
-					'img': "public/img/projects/MusicStore.jpg"
-				}*/
+				 'name': "Music Store",
+				 'description': "Shop from a fake online music store.",
+				 'href': "http://musicshop.azurewebsites.net/",
+				 'img': "public/img/projects/MusicStore.jpg"
+				 }*/
 			];
 
 			/*
@@ -77,9 +77,8 @@ var app = angular.module('app')
 			 ]
 			 */
 
-			window.addEventListener("load", function () {
-				var is_touch_device = 'ontouchstart' in document.documentElement;
-				if (is_touch_device) {
+			window.addEventListener('touchstart', function () {
+				if (!window.TOUCH_DEVICE) {
 					var images = document.getElementById("projects").getElementsByClassName("images");
 					for (var i = 0; i < images.length; i++) {
 						var texts = images[i].getElementsByClassName("text");
@@ -88,6 +87,7 @@ var app = angular.module('app')
 						}
 					}
 				}
+				window.TOUCH_DEVICE = true;
 			});
 
 		}]);
