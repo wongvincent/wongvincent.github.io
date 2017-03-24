@@ -28,6 +28,7 @@
 		position: fixed;
 		top: 0;
 		z-index: -99;
+		will-change: transform;
 
 		#banner-image {
 			height: $full-height;
