@@ -3,7 +3,7 @@ var app = angular.module('app')
 		.controller('HomeController', ['$scope', function ($scope) {
 			var loadBannerImage = function () {
 				var initialTime = new Date().getTime();
-				var background_images = ['burnaby.jpg', 'chief.jpg', 'garibaldi.jpg', 'capilano.jpg'];
+				var background_images = ['DiezVistas.png', 'GaribaldiLake.png', 'LionsBay.png'];
 				var img = new Image();
 
 				$('.container').css('overflow', 'hidden');
@@ -37,7 +37,7 @@ var app = angular.module('app')
 				},
 				{
 					'name': "ChromeOverflow",
-					'description': "A Chrome extension that provides a unified view of the top Stack Overflow results for different exceptions encountered during development. (WIP)",
+					'description': "A Chrome extension that provides a unified view of the top Stack Overflow results for different exceptions encountered during development.",
 					'href': "http://github.com/risamaki/ChromeOverflow",
 					'img': "public/img/projects/ChromeOverflow.jpg"
 				},

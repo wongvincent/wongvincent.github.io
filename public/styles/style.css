@@ -222,7 +222,6 @@ a {
       text-align: left;
       vertical-align: top;
       display: inline-block;
-      max-width: 500px;
       width: auto;
       padding: 25px;
       font-size: 1.3em; }
@@ -237,12 +236,12 @@ a {
         font-weight: bold;
         color: #27598C; }
       #home #about #wrapper #text #body div.images {
+        text-align: center;
         margin-top: 20px; }
         #home #about #wrapper #text #body div.images div {
           display: inline-block;
           width: 64px;
-          text-align: center;
-          margin: 12px; }
+          margin: 10px; }
           #home #about #wrapper #text #body div.images div img {
             width: 64px;
             height: 64px;

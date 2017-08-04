@@ -87,7 +87,6 @@
 				text-align: left;
 				vertical-align: top;
 				display: inline-block;
-				max-width: 500px;
 				width: auto;
 				padding: 25px;
 				font-size: 1.3em;
@@ -106,12 +105,12 @@
 						color: $blue;
 					}
 					div.images {
+						text-align: center;
 						margin-top: 20px;
 						div {
 							display: inline-block;
 							width: $about-me-image-size;
-							text-align: center;
-							margin: 12px;
+							margin: 10px;
 							img {
 								width: $about-me-image-size;
 								height: $about-me-image-size;
