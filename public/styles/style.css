@@ -262,8 +262,8 @@ a {
       top: 0;
       color: white;
       background-color: rgba(0, 50, 100, 0.8);
-      width: 300px;
-      height: 300px;
+      width: 275px;
+      height: 275px;
       text-align: center;
       z-index: 10;
       opacity: 0;
@@ -271,12 +271,12 @@ a {
       -moz-transition: all 0.5s ease;
       -o-transition: all 0.5s ease;
       transition: all 0.5s ease;
-      line-height: 300px; }
+      line-height: 275px; }
     #home #projects .images a .text.two-spans {
       line-height: normal; }
       #home #projects .images a .text.two-spans .title {
         margin-bottom: 10px;
-        padding-top: 40px; }
+        padding-top: 24px; }
       #home #projects .images a .text.two-spans div:nth-child(2) {
         margin: 14px;
         font-size: 1.2em; }
@@ -287,8 +287,8 @@ a {
     #home #projects .images a .text:hover {
       opacity: 1; }
     #home #projects .images a img {
-      height: 300px;
-      width: 300px; }
+      height: 275px;
+      width: 275px; }
 #home #down-arrow {
   position: absolute;
   bottom: 25px;

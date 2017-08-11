@@ -11,7 +11,7 @@ var app = angular.module('app')
 
 				img.onload = function () {
 					var actualLoadtime = new Date().getTime() - initialTime;
-					var desiredLoadtime = 800;
+					var desiredLoadtime = 0;
 					var waitAdditional = (actualLoadtime < desiredLoadtime) ? desiredLoadtime - actualLoadtime : 0;
 					setTimeout(function () {
 						$('#banner-image').css({'background': 'url(' + img.src + ') no-repeat center center'});
