@@ -18,38 +18,11 @@
     <meta name="msapplication-TileColor" content="#FFFFFF" />
     <meta name="msapplication-TileImage" content="public/img/favicons/mstile-144x144.png" />
 
-    <!-- stylesheets (.SCSS sheets imported in style.css) -->
-    <link rel="stylesheet" href="public/styles/style.css">
-
     <!-- styles lib -->
     <link rel="stylesheet" href="public/styles/animate.css">
 
     <!-- libs -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
-    <script src="public/js/libs/angular-animate.min.js"></script>
-    <script src="public/js/libs/angular-cookies.min.js"></script>
-    <script src="public/js/libs/angular-route.min.js"></script>
-    <script src="public/js/libs/angular-scroll-animate.js"></script>
-
-    <!-- plugins -->
-
-    <!-- Angular analytics -->
-    <script src="public/js/plugins/angulartics.min.js"></script>
-    <script src="public/js/plugins/angulartics-ga.min.js"></script>
-
-    <!-- Smooth scroll -->
-    <script src="public/js/plugins/angular-smooth-scroll.js"></script>
-
-    <!-- typed.js jQuery plugin -->
-    <script src="public/js/plugins/typed.js-master/js/typed.js"></script>
-
-    <!-- controllers -->
-    <script src="public/js/controllers/AppController.min.js"></script>
-    <script src="public/js/controllers/HomeController.min.js"></script>
-
-    <!-- directives -->
-    <script src="public/js/directives/TypedDirective.min.js"></script>
 
     <!-- Google analytics -->
     <script>
@@ -60,72 +33,69 @@
 
         ga('create', 'UA-70991808-1', 'auto');
     </script>
+
+    <style>
+        .container {
+            height: 95vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        a {
+            margin: 36px;
+        }
+
+        img {
+            width: 64px;
+            height: 64px;
+        }
+
+        img.hover {
+            display: none;
+        }
+
+        #github-logo {
+            -webkit-animation-duration: 3s;
+            -moz-animation-duration: 3s;
+            animation-duration: 3s;
+            -webkit-animation-delay: 0s;
+            -moz-animation-delay: 0s;
+            animation-delay: 0s;
+        }
+
+        #linkedin-logo {
+            -webkit-animation-duration: 3s;
+            -moz-animation-duration: 3s;
+            animation-duration: 3s;
+            -webkit-animation-delay: 0s;
+            -moz-animation-delay: 0s;
+            animation-delay: 0s;
+        }
+    </style>
 </head>
 
-<body ng-app="app" ng-controller="AppController">
-<div class="wrapper" id="top">
+<body>
     <div class="container">
-
-        <div id="nav-header">
-            <a href="" ng-click="scrollTo('top')" analytics-on analytics-event="Navigate" analytics-category="Header"
-               analytics-label="Home" when-visible="animateInFadeIn" class="hidden">
-                HOME
-            </a>
-            <a href="" ng-click="scrollTo('about')" analytics-on analytics-event="Navigate" analytics-category="Header"
-               analytics-label="About" when-visible="animateInFadeIn" class="hidden">
-                ABOUT
-            </a>
-            <a href="" ng-click="scrollTo('projects')" analytics-on analytics-event="Navigate" analytics-category="Header"
-               analytics-label="Projects" when-visible="animateInFadeIn" class="hidden">
-                PROJECTS
-            </a>
-            <!--<a href="" ng-click="scrollTo('photos')" analytics-on analytics-event="Navigate" analytics-category="Header"
-               analytics-label="Photos" when-visible="animateInFadeIn" class="hidden">
-                PHOTOS
-            </a>-->
-        </div>
-        <div id="loading">
-            <div class="spinner"></div>
-            <div id="site-logo"><img src="public/img/favicons/websitelogo180px.png"></div>
-        </div>
-
-
-        <div class="ngview" ng-view autoscroll="true"></div>
-
-        <div class="footer grey">
-            <div class="images">
-                <div>
-                    <a href="https://github.com/wongvincent" target="_blank" analytics-on
-                       analytics-event="GitHub" analytics-category="Footer">
-                        <img id="github-footer-logo" src="public/img/logos/GitHub-Mark-Light-64px.png">
-                    </a>
-                </div>
-                <div>
-                    <a href="https://ca.linkedin.com/in/vincentw1" target="_blank" analytics-on
-                       analytics-event="LinkedIn" analytics-category="Footer">
-                        <img src="public/img/logos/linkedin_light_64.png">
-                    </a>
-                </div>
-                <div>
-                    <a href="mailto:hello@vincentwong.me" target="_top" analytics-on analytics-event="Email"
-                       analytics-category="Footer">
-                        <img src="public/img/logos/mail_light_64.png">
-                    </a>
-                </div>
-                <!--<div>
-                    <a href="https://www.instagram.com/wong.vincent/" target="_blank" analytics-on
-                       analytics-event="Instagram" analytics-category="Footer">
-                        <img src="public/img/logos/instagram_light_64.png">
-                    </a>
-                </div> -->
-            </div>
-            <div>&copy; {{year}} Vincent Wong</div>
-        </div>
-
-
+        <a id="github-logo" class="animated fadeIn logo" href="https://github.com/wongvincent" target="_blank">
+            <img class="non-hover" id="github-aboutme-logo" src="public/img/logos/GitHub-Mark-64px.png">
+            <img class="hover" src="public/img/newIndex/Octocat_64.png"></a>
+        <a id="linkedin-logo" class="animated fadeIn logo" href="https://ca.linkedin.com/in/vincentw1" target="_blank">
+            <img class="non-hover" src="public/img/logos/linkedin_dark_64.png">
+            <img class="hover" src="public/img/newIndex/linkedin_color_64.png"></a>
     </div>
-</div>
 
+    <script>
+        $(".logo").on("mouseenter", function(event) {
+            $(this).find(".non-hover").hide();
+            $(this).find(".hover").show();
+        });
+
+        $(".logo").on("mouseleave", function() {
+            $(this).find(".hover").hide();
+            $(this).find(".non-hover").show();
+        });
+    </script>
 </body>
 </html>
 
