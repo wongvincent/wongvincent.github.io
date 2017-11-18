@@ -38,64 +38,45 @@
         .container {
             height: 95vh;
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             justify-content: center;
         }
 
         a {
-            margin: 36px;
+            margin: 0 80px;
+        }
+
+        .fadeIn {
+            -webkit-animation-duration: 1.5s;
+            -moz-animation-duration: 1.5s;
+            animation-duration: 1.5s;
         }
 
         img {
-            width: 64px;
-            height: 64px;
+            width: 100px;
+            height: 100px;
+            transition: all 0.7s ease;
+            -webkit-filter: saturate(0%);
+            filter: saturate(0%);
         }
 
-        img.hover {
-            display: none;
-        }
-
-        #github-logo {
-            -webkit-animation-duration: 3s;
-            -moz-animation-duration: 3s;
-            animation-duration: 3s;
-            -webkit-animation-delay: 0s;
-            -moz-animation-delay: 0s;
-            animation-delay: 0s;
-        }
-
-        #linkedin-logo {
-            -webkit-animation-duration: 3s;
-            -moz-animation-duration: 3s;
-            animation-duration: 3s;
-            -webkit-animation-delay: 0s;
-            -moz-animation-delay: 0s;
-            animation-delay: 0s;
+        img:hover {
+            -webkit-filter: saturate(100%);
+            filter: saturate(100%);
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <a id="github-logo" class="animated fadeIn logo" href="https://github.com/wongvincent" target="_blank">
-            <img class="non-hover" id="github-aboutme-logo" src="public/img/logos/GitHub-Mark-64px.png">
-            <img class="hover" src="public/img/newIndex/Octocat_64.png"></a>
-        <a id="linkedin-logo" class="animated fadeIn logo" href="https://ca.linkedin.com/in/vincentw1" target="_blank">
-            <img class="non-hover" src="public/img/logos/linkedin_dark_64.png">
-            <img class="hover" src="public/img/newIndex/linkedin_color_64.png"></a>
+        <a class="animated fadeIn" href="https://github.com/wongvincent" target="_blank">
+            <img src="public/img/newIndex/Octocat_256.png">
+        </a>
+        <a class="animated fadeIn" href="https://ca.linkedin.com/in/vincentw1" target="_blank">
+            <img src="public/img/newIndex/linkedin_color_128.png">
+        </a>
     </div>
-
-    <script>
-        $(".logo").on("mouseenter", function(event) {
-            $(this).find(".non-hover").hide();
-            $(this).find(".hover").show();
-        });
-
-        $(".logo").on("mouseleave", function() {
-            $(this).find(".hover").hide();
-            $(this).find(".non-hover").show();
-        });
-    </script>
 </body>
 </html>
 
