@@ -35,6 +35,10 @@
     </script>
 
     <style>
+        [hidden] {
+            display: none;
+        }
+
         .container {
             height: 95vh;
             display: flex;
@@ -58,7 +62,7 @@
             animation-delay: 1s;
         }
 
-        img {
+        a > img {
             width: 100px;
             height: 100px;
             transition: all 0.7s ease;
@@ -66,7 +70,7 @@
             filter: saturate(0%);
         }
 
-        img:hover {
+        a > img:hover {
             -webkit-filter: saturate(100%);
             filter: saturate(100%);
         }
@@ -83,9 +87,12 @@
             }
         }
 
-        @media only screen and (max-device-width: 767px) {
+        @media only screen and (max-width: 767px) {
             /* smaller than tablets */
             .projects {
+                display: none;
+            }
+            #ig-hover-preview {
                 display: none;
             }
         }
@@ -104,13 +111,47 @@
         .projects a:last-of-type {
             margin-right: 50px;
         }
+
+        #ig-hover-preview {
+            padding: 12px;
+            position: absolute;
+            border-radius: 8px;
+            border: 1px solid #eee;
+            background-color: #eee;
+            -webkit-box-shadow: 13px 6px 32px 0px rgba(130,130,130,1);
+            -moz-box-shadow: 13px 6px 32px 0px rgba(130,130,130,1);
+            box-shadow: 13px 6px 32px 0px rgba(130,130,130,1);
+            margin-top: 30px;
+            margin-left: -65px;
+        }
+
+        #ig-hover-preview.fadeIn {
+            -webkit-animation-duration: 1.0s;
+            -moz-animation-duration: 1.0s;
+            animation-duration: 1.0s;
+        }
+
+        #ig-hover-preview img {
+            width: 204px;
+            height: 100%;
+            -webkit-animation-duration: 0.5s;
+            -moz-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <a class="animated fadeIn" href="https://www.instagram.com/podydoodle/" target="_blank">
+        <a id="ig-link" class="animated fadeIn" href="https://www.instagram.com/podydoodle/" target="_blank">
             <img src="public/img/newIndex/ig_icon.png">
+            <div id="ig-hover-preview" class="animated fadeIn" hidden>
+                <img class="ig-preview-image animated fadeIn" src="public/img/pody/pody-1.jpg" hidden>
+                <img class="ig-preview-image animated fadeIn" src="public/img/pody/pody-2.jpg" hidden>
+                <img class="ig-preview-image animated fadeIn" src="public/img/pody/pody-3.jpg" hidden>
+                <img class="ig-preview-image animated fadeIn" src="public/img/pody/pody-4.jpg" hidden>
+                <img class="ig-preview-image animated fadeIn" src="public/img/pody/pody-5.jpg" hidden>
+            </div>
         </a>
         <a class="animated fadeIn" href="https://github.com/wongvincent" target="_blank">
             <img src="public/img/newIndex/Octocat_256.png">
@@ -128,5 +169,45 @@
         </div -->
     </div>
 </body>
+
+<script>
+let previewCounter = 0;
+let igPreviewLoop;
+const igLinkElem = document.getElementById("ig-link");
+igLinkElem.addEventListener("mouseenter", () => {
+    const previewElem = document.getElementById("ig-hover-preview");
+    previewElem.removeAttribute("hidden");
+
+    const previewImages = document.getElementsByClassName("ig-preview-image");
+
+    const loopVisiblePreviewImage = () => {
+        const indexNotHidden = previewCounter++ % previewImages.length;
+        [...previewImages].forEach((image, index) => {
+            if (index !== indexNotHidden) {
+                image.setAttribute("hidden", "");
+            } else {
+                image.removeAttribute("hidden");
+            }
+        });
+    };
+    igPreviewLoop = setIntervalAndExecute(loopVisiblePreviewImage, 3000);
+});
+igLinkElem.addEventListener("mouseleave", () => {
+    clearInterval(igPreviewLoop);
+
+    const previewElem = document.getElementById("ig-hover-preview");
+    previewElem.setAttribute("hidden", "");
+
+    const previewImages = document.getElementsByClassName("ig-preview-image");
+    [...previewImages].forEach(image => {
+        image.setAttribute("hidden", "");
+    });
+});
+
+function setIntervalAndExecute(fn, t) {
+    fn();
+    return(setInterval(fn, t));
+}
+</script>
 </html>
 
